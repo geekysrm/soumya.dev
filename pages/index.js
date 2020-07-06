@@ -1138,8 +1138,8 @@ export default function Home() {
                         style={{ color: "rgba(154, 164, 167, 0.432)" }}
                       />
                       &nbsp;&nbsp;<span>Email:</span>
-                      <a href="mailto:soumyacool2012@gmail.com?subject=I%20just%20saw%20your%20personal%20website">
-                        soumyacool2012@gmail.com
+                      <a href="mailto:soumyarnm@gmail.com?subject=I%20just%20saw%20your%20personal%20website">
+                        soumyarnm@gmail.com
                       </a>
                     </p>
                     <p>
