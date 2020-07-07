@@ -156,18 +156,17 @@ export default function Home() {
         <section className="section section-light" id="whoiam">
           <h2>Who I am</h2>
           <p id="para-whoiam">
-            Hi, <i>you!</i> <br /> I am <b>Soumya Ranjan Mohanty</b>,{" "}
-            <i>a Google India Scholar</i>, a blockchain enthusiast, an aspiring
-            full-stack web developer and entrepreneur. I am currently a
-            sophomore in Computer Science Engineering at{" "}
+            Hi, <i>you!</i> <br /> I am <b>Soumya Ranjan Mohanty</b>, a Google
+            Certified Mobile Web Specialist, Google India Scholar, a full-stack
+            web developer and entrepreneur. I completed my BTech. in Computer
+            Science Engineering at{" "}
             <a href="https://www.iiit-bh.ac.in" target="_blank">
               IIIT Bhubaneswar
             </a>{" "}
             .
             <br />
-            I love coding and code almost daily. I have special interest in
-            blockchain technology. I have knowledge of various web technologies
-            and have some projects to my name.
+            I love coding and participating in hackathons. I have knowledge of
+            various web technologies and have some projects to my name.
             <br />I love writing and I maintain a{" "}
             <a href="https://geekysrm.github.io/blog" target="_blank">
               blog
