@@ -1,5 +1,5 @@
 // Base-64 and ROT13 decoder
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 const ROT13_API_URL = "https://helloacm.com/api/rot13/?s="; //GET
@@ -24,10 +24,15 @@ export default function Decode() {
         setDecodedText("");
       }
     } else if (decodeType === "base64") {
-      // do base64 decoding, e.g.const decodedData = window.atob(encodedData);
-      const base64DecodedText = window.atob(encodedText);
-      console.log("base64 decoded", base64DecodedText);
-      setDecodedText(base64DecodedText);
+      // do base64 decoding
+      try {
+        const base64DecodedText = window.atob(encodedText);
+        console.log("base64 decoded", base64DecodedText);
+        setDecodedText(base64DecodedText);
+      } catch (error) {
+        console.error("Some error occured while decoding", error);
+        setDecodedText("");
+      }
     }
   };
   return (
