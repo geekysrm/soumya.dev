@@ -90,8 +90,9 @@ export default function Home() {
           </div>
         </nav>
         <div className="announcement">
-          Note: This site is under construction. I'm in the middle of building a
-          new version in <b>React and Gatsby</b>. Please excuse my mess!
+          💡Note: This site is under construction 🚧. I'm in the middle of
+          building a new version in <b>React and Gatsby</b>. Please excuse my
+          mess!
         </div>
         <br />
         <br />
