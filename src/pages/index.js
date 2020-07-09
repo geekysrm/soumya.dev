@@ -153,7 +153,7 @@ export default function Home() {
           </div>
         </div>
         <section className="section section-light" id="whoiam">
-          <h2>Who I am</h2>
+          <h2 className="text-3xl font-semibold">Who I am</h2>
           <p id="para-whoiam">
             Hi, <i>you!</i> <br /> I am <b>Soumya Ranjan Mohanty</b>, a Google
             Certified Mobile Web Specialist, Google India Scholar, a full-stack
@@ -179,7 +179,12 @@ export default function Home() {
           </div>
         </div>
         <section className="section section-light">
-          <h2 style={{ marginBottom: "-100px" }}>MY SKILLS</h2>
+          <h2
+            className="text-3xl font-semibold"
+            style={{ marginBottom: "-100px" }}
+          >
+            MY SKILLS
+          </h2>
           <div id="skill" className="skill-area">
             <div className="container">
               <div className="row">
@@ -440,7 +445,7 @@ export default function Home() {
           </div>
         </div>
         <section className="section section-dark">
-          <h2>My Education</h2>
+          <h2 className="text-3xl font-semibold">My Education</h2>
           <p className="timeline-container"></p>
           <ul className="timeline">
             {/* Item 1 */}
@@ -449,7 +454,7 @@ export default function Home() {
                 <div className="flag-wrapper">
                   <span className="flag ed3">B Tech. Degree</span>
                   <span className="time-wrapper">
-                    <span className="time">2016 - 2020(expected)</span>
+                    <span className="time">2016 - 2020</span>
                   </span>
                 </div>
                 <div className="desc desc-left">
@@ -458,7 +463,7 @@ export default function Home() {
                     IIIT Bhubaneswar
                   </a>
                   .
-                  <br /> Doing my B Tech. in Computer Science and Engineering.
+                  <br />B Tech. in Computer Science and Engineering.
                 </div>
               </div>
             </li>
@@ -498,7 +503,18 @@ export default function Home() {
               </div>
             </li>
           </ul>
-          <h2>My Experience</h2>
+          <h2 className="text-3xl font-semibold">My Experience</h2>
+          <span>
+            For updated experience info, checkout my{" "}
+            <a
+              className="text-blue-500"
+              href="https://linkedin.com/in/geekysrm"
+              target="_blank"
+            >
+              Linkedin
+            </a>
+            .
+          </span>
           <ul className="timeline">
             {/* Item 1 */}
             <li>
@@ -588,12 +604,24 @@ export default function Home() {
           </div>
         </div>
         <section className="section section-light">
-          <h2>My Certifications</h2>
+          <h2 className="text-3xl font-semibold">My Certifications</h2>
+          <span>
+            For updated certifications, checkout my{" "}
+            <a
+              className="text-blue-500"
+              href="https://linkedin.com/in/geekysrm"
+              target="_blank"
+            >
+              Linkedin{" "}
+            </a>
+            .
+          </span>
+          <br />
           <br />
           <div className="card-deck">
             <div className="card">
               <div className="card-body">
-                <h5 className="card-title">
+                <h5 className="card-title text-xl">
                   Participation in 2-day hackathon and Git workshop
                 </h5>
                 <p className="card-text">
@@ -614,7 +642,9 @@ export default function Home() {
             </div>
             <div className="card">
               <div className="card-body">
-                <h5 className="card-title">Distinguished Fellow at Hasura</h5>
+                <h5 className="card-title text-xl">
+                  Distinguished Fellow at Hasura
+                </h5>
                 <p className="card-text">
                   Awarded the Hasura Distingished fellow - High Performer
                   certificate in Hasura Product Development Fellowship. The
@@ -636,7 +666,7 @@ export default function Home() {
             </div>
             <div className="card">
               <div className="card-body">
-                <h5 className="card-title">
+                <h5 className="card-title text-xl">
                   Introduction to Modern Application Development
                 </h5>
                 <p className="card-text">
@@ -661,7 +691,7 @@ export default function Home() {
             </div>
             <div className="card">
               <div className="card-body">
-                <h5 className="card-title">
+                <h5 className="card-title text-xl">
                   National Programming Aptitude Test (NPAT)
                 </h5>
                 <p className="card-text">
@@ -683,7 +713,9 @@ export default function Home() {
             </div>
             <div className="card">
               <div className="card-body">
-                <h5 className="card-title">Network Management Course</h5>
+                <h5 className="card-title text-xl">
+                  Network Management Course
+                </h5>
                 <br />
                 <p className="card-text">
                   This was a course on Network Management conducted by Nettech
@@ -703,7 +735,27 @@ export default function Home() {
           </div>
         </div>
         <section className="section section-light">
-          <h2>Projects done by me</h2>
+          <h2 className="text-3xl font-semibold">Projects done by me</h2>
+          <span>
+            For updated projects, checkout my{" "}
+            <a
+              className="text-blue-500"
+              href="https://linkedin.com/in/geekysrm"
+              target="_blank"
+            >
+              Linkedin{" "}
+            </a>
+            and my{" "}
+            <a
+              className="text-blue-500"
+              href="https://github.com/geekysrm"
+              target="_blank"
+            >
+              GitHub
+            </a>
+            .
+          </span>
+          <br />
           <br />
           <div className="container-fluid ">
             <div className="card-deck ">
@@ -714,7 +766,7 @@ export default function Home() {
                   alt="Electron Crypto Currency Tracker"
                 />
                 <div className="card-body">
-                  <h5 className="card-title">
+                  <h5 className="card-title text-xl">
                     Official Website of IIIT Tech Society
                   </h5>
                   <p className="card-text">
@@ -750,7 +802,7 @@ export default function Home() {
                   alt="Electron Crypto Currency Tracker"
                 />
                 <div className="card-body">
-                  <h5 className="card-title">
+                  <h5 className="card-title text-xl">
                     Electron Crypto Currency Tracker
                   </h5>
                   <p className="card-text">
@@ -780,7 +832,7 @@ export default function Home() {
                   alt="E-bloodbank-app"
                 />
                 <div className="card-body">
-                  <h5 className="card-title">E-Bloodbank</h5>
+                  <h5 className="card-title text-xl">E-Bloodbank</h5>
                   <p className="card-text">
                     {" "}
                     E-bloodbank is a convenient way to connect blood donors to
@@ -818,7 +870,7 @@ export default function Home() {
                   alt="E-election-app"
                 />
                 <div className="card-body">
-                  <h5 className="card-title">E-election</h5>
+                  <h5 className="card-title text-xl">E-election</h5>
                   <p className="card-text">
                     I and my teammate made an e-election app that allows users
                     to conduct an election for a given post. For each post,
@@ -856,7 +908,9 @@ export default function Home() {
                   alt="FB-weather-bot"
                 />
                 <div className="card-body">
-                  <h5 className="card-title">Facebook Real-Time Weather Bot</h5>
+                  <h5 className="card-title text-xl">
+                    Facebook Real-Time Weather Bot
+                  </h5>
                   <p className="card-text">
                     This is a Weather bot on facebook messenger using Node.JS,
                     which when given a city/place name replies back with the
@@ -890,7 +944,9 @@ export default function Home() {
                   alt="FB-GOT-bot"
                 />
                 <div className="card-body">
-                  <h5 className="card-title">Facebook Game of Thrones Bot</h5>
+                  <h5 className="card-title text-xl">
+                    Facebook Game of Thrones Bot
+                  </h5>
                   <p className="card-text">
                     This is a fun bot built on Node.JS for all the{" "}
                     <a href="https://www.hbo.com/game-of-thrones">
@@ -933,7 +989,7 @@ export default function Home() {
                   />
                 </a>
                 <div className="card-body">
-                  <h5 className="card-title">
+                  <h5 className="card-title text-xl">
                     Twitter Retweet/Follow/Like Bot
                   </h5>
                   <p className="card-text">
@@ -970,7 +1026,7 @@ export default function Home() {
                   alt="Twitter-clone"
                 />
                 <div className="card-body">
-                  <h5 className="card-title">Twitter UI Clone</h5>
+                  <h5 className="card-title text-xl">Twitter UI Clone</h5>
                   <p className="card-text">
                     This is a clone of the twitter website UI. It is created
                     using React.JS and material-ui. The timeline page and the
@@ -1000,7 +1056,7 @@ export default function Home() {
                   alt="Attendance-Manager"
                 />
                 <div className="card-body">
-                  <h5 className="card-title">Attendance Manager</h5>
+                  <h5 className="card-title text-xl">Attendance Manager</h5>
                   <p className="card-text">
                     Attendance Manager is built using Node JS in server side,
                     Postgres as database, and HTML CSS Bootstrap in front-end.
@@ -1030,7 +1086,7 @@ export default function Home() {
                   alt="Blood-Group-CPP"
                 />
                 <div className="card-body">
-                  <h5 className="card-title">
+                  <h5 className="card-title text-xl">
                     Blood Group Database of Odisha using C++ OOP
                   </h5>
                   <p className="card-text">
@@ -1064,7 +1120,7 @@ export default function Home() {
                   alt="Linux-from-scratch"
                 />
                 <div className="card-body">
-                  <h5 className="card-title">Linux From Scratch</h5>
+                  <h5 className="card-title text-xl">Linux From Scratch</h5>
                   <p className="card-text">
                     Completed the Linux From Scratch project in 3 weeks time.
                     Understood Linux system fundamentals and built a Linux
@@ -1115,18 +1171,17 @@ export default function Home() {
                     <h1>Contact Me</h1>
                     <p>
                       You can contact me via the contact form displayed
-                      alongside. Alternatively, you can also reach me on my
-                      social handles and my phone.
+                      alongside.
+                      <br />
+                      Alternatively, you can also reach me on my social handles
+                      and my email.
                     </p>
                   </div>
                   <div className="contact-address">
                     <p>
-                      K-402,
-                      <br /> Eniac Hall of Residence,
-                      <br /> IIIT Bhubaneswar,
-                      <br /> Bhubaneswar - 751003,
-                      <br /> Odisha,
-                      <br /> India{" "}
+                      <b>Presently at:</b> <br />
+                      Bengaluru, Karnataka.
+                      <br /> India.{" "}
                     </p>
                   </div>
                   <div className="contact-mail">
@@ -1139,14 +1194,6 @@ export default function Home() {
                       <a href="mailto:soumyarnm@gmail.com?subject=I%20just%20saw%20your%20personal%20website">
                         soumyarnm@gmail.com
                       </a>
-                    </p>
-                    <p>
-                      <i
-                        className="fa fa-phone contact-icons"
-                        style={{ color: "rgba(154, 164, 167, 0.432)" }}
-                      />
-                      &nbsp;&nbsp;<span>Phone:</span>
-                      <a href="tel:+917077779815">+91-70-7777-9815</a>
                     </p>
                   </div>
                 </div>
@@ -1225,8 +1272,8 @@ export default function Home() {
             <div className="row justify-content-center">
               <div className="col-lg-8 text-center">
                 <p className="copyright">
-                  Copyright 2018 Soumya Ranjan Mohanty <br />{" "}
-                  <i className="fas fa-code" /> With{" "}
+                  Copyright {new Date().getFullYear()} Soumya Ranjan Mohanty{" "}
+                  <br /> <i className="fas fa-code" /> With{" "}
                   <i className="fas fa-heart" />
                 </p>
                 <div className="footer-social-links">
