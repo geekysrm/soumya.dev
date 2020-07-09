@@ -69,9 +69,9 @@ export default function Decode() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <h2 className="header">Welcome to decoder</h2>
+        <h2 className="header text-3xl font-semibold">Welcome to decoder</h2>
         <div className="form">
-          <h4>Select type</h4>
+          <h4 className="font-semibold mb-2 text-xl">Select type</h4>
           <div className="form-group">
             <select
               className="form-control"
@@ -84,7 +84,7 @@ export default function Decode() {
           </div>
           <br />
           <label>
-            <h4>Encoded Text:</h4>
+            <h4 className="font-semibold mb-2 text-xl">Encoded Text:</h4>
             <input
               className="form-control encoded-input"
               type="text"
@@ -101,7 +101,7 @@ export default function Decode() {
           <br />
           {decodedText && (
             <>
-              <h4>Decoded Text is:</h4>
+              <h4 className="font-semibold mb-2 text-xl">Decoded Text is:</h4>
               <div className="decoded-text alert alert-secondary">
                 {decodedText}
               </div>
