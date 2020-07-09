@@ -282,7 +282,7 @@ export default function Home() {
                           <p>90%</p>
                         </div>
                       </div>
-                      <p>PostgreSQL</p>
+                      <p>SQL</p>
                       <div className="progress">
                         <div
                           className="progress-bar"
@@ -365,7 +365,7 @@ export default function Home() {
                         <p>95%</p>
                       </div>
                     </div>
-                    <p>linux OS</p>
+                    <p>Gatsby JS</p>
                     <div className="progress">
                       <div
                         className="progress-bar"
@@ -404,7 +404,7 @@ export default function Home() {
                         <p>90%</p>
                       </div>
                     </div>
-                    <p>ChatBot Making</p>
+                    <p>Next.js</p>
                     <div className="progress">
                       <div
                         className="progress-bar"
@@ -417,7 +417,7 @@ export default function Home() {
                         <p>90%</p>
                       </div>
                     </div>
-                    <p>Search Engine Optimization (SEO)</p>
+                    <p>GraphQL</p>
                     <div className="progress">
                       <div
                         className="progress-bar"
@@ -2093,6 +2093,9 @@ export default function Home() {
 
         .announcement a {
           font-weight: 700;
+        }
+        .progress {
+          display: none;
         }
       `}</style>
 
