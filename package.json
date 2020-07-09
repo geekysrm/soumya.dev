@@ -1,7 +1,9 @@
 {
   "name": "soumya.dev",
+  "description": "Personal website of Soumya (geekysrm)",
   "version": "0.1.0",
-  "private": true,
+  "author": "Soumya Ranjan Mohanty <soumyarnm@gmail.com> (https://soumya.dev)",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,5 +14,9 @@
     "next": "9.4.4",
     "react": "16.13.1",
     "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^1.4.6"
   }
 }
