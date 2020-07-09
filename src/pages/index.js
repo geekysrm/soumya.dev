@@ -1052,7 +1052,7 @@ export default function Home() {
               <div className="card">
                 <img
                   className="card-img-top"
-                  src="/img/project-attendance-manager.png"
+                  src="/img/project-attendance-manager.jpg"
                   alt="Attendance-Manager"
                 />
                 <div className="card-body">
