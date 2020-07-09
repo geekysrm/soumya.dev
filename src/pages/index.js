@@ -193,244 +193,28 @@ export default function Home() {
                   <div className="skillbar">
                     <div className="skill-progress">
                       <p>Node.JS</p>
-                      <div className="progress">
-                        <div
-                          className="progress-bar"
-                          role="progressbar"
-                          style={{ width: "90%" }}
-                          aria-valuenow={90}
-                          aria-valuemin={0}
-                          aria-valuemax={100}
-                        >
-                          <p>90%</p>
-                        </div>
-                      </div>
                       <p>React.JS</p>
-                      <div className="progress">
-                        <div
-                          className="progress-bar"
-                          role="progressbar"
-                          style={{ width: "95%" }}
-                          aria-valuenow={95}
-                          aria-valuemin={0}
-                          aria-valuemax={100}
-                        >
-                          <p>95%</p>
-                        </div>
-                      </div>
                       <p>HTML 5</p>
-                      <div className="progress">
-                        <div
-                          className="progress-bar"
-                          role="progressbar"
-                          style={{ width: "100%" }}
-                          aria-valuenow={100}
-                          aria-valuemin={0}
-                          aria-valuemax={100}
-                        >
-                          <p>100%</p>
-                        </div>
-                      </div>
                       <p>CSS 3</p>
-                      <div className="progress">
-                        <div
-                          className="progress-bar"
-                          role="progressbar"
-                          style={{ width: "95%" }}
-                          aria-valuenow={95}
-                          aria-valuemin={0}
-                          aria-valuemax={100}
-                        >
-                          <p>95%</p>
-                        </div>
-                      </div>
                       <p>Electron</p>
-                      <div className="progress">
-                        <div
-                          className="progress-bar"
-                          role="progressbar"
-                          style={{ width: "95%" }}
-                          aria-valuenow={95}
-                          aria-valuemin={0}
-                          aria-valuemax={95}
-                        >
-                          <p>95%</p>
-                        </div>
-                      </div>
                       <p>Express JS</p>
-                      <div className="progress">
-                        <div
-                          className="progress-bar"
-                          role="progressbar"
-                          style={{ width: "90%" }}
-                          aria-valuenow={90}
-                          aria-valuemin={0}
-                          aria-valuemax={100}
-                        >
-                          <p>90%</p>
-                        </div>
-                      </div>
                       <p>Javascript</p>
-                      <div className="progress">
-                        <div
-                          className="progress-bar"
-                          role="progressbar"
-                          style={{ width: "90%" }}
-                          aria-valuenow={90}
-                          aria-valuemin={0}
-                          aria-valuemax={100}
-                        >
-                          <p>90%</p>
-                        </div>
-                      </div>
                       <p>SQL</p>
-                      <div className="progress">
-                        <div
-                          className="progress-bar"
-                          role="progressbar"
-                          style={{ width: "90%" }}
-                          aria-valuenow={90}
-                          aria-valuemin={0}
-                          aria-valuemax={100}
-                        >
-                          <p>90%</p>
-                        </div>
-                      </div>
                       <p>Networking</p>
-                      <div className="progress">
-                        <div
-                          className="progress-bar"
-                          role="progressbar"
-                          style={{ width: "70%" }}
-                          aria-valuenow={70}
-                          aria-valuemin={0}
-                          aria-valuemax={100}
-                        >
-                          <p>70%</p>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
                 <div className="col-lg-6">
                   <div className="skill-progress">
                     <p>C</p>
-                    <div className="progress">
-                      <div
-                        className="progress-bar"
-                        role="progressbar"
-                        style={{ width: "95%" }}
-                        aria-valuenow={95}
-                        aria-valuemin={0}
-                        aria-valuemax={100}
-                      >
-                        <p>95%</p>
-                      </div>
-                    </div>
                     <p>C++</p>
-                    <div className="progress">
-                      <div
-                        className="progress-bar"
-                        role="progressbar"
-                        style={{ width: "90%" }}
-                        aria-valuenow={90}
-                        aria-valuemin={0}
-                        aria-valuemax={100}
-                      >
-                        <p>90%</p>
-                      </div>
-                    </div>
                     <p>React Native</p>
-                    <div className="progress">
-                      <div
-                        className="progress-bar"
-                        role="progressbar"
-                        style={{ width: "90%" }}
-                        aria-valuenow={90}
-                        aria-valuemin={0}
-                        aria-valuemax={90}
-                      >
-                        <p>90%</p>
-                      </div>
-                    </div>
                     <p>Git</p>
-                    <div className="progress">
-                      <div
-                        className="progress-bar"
-                        role="progressbar"
-                        style={{ width: "95%" }}
-                        aria-valuenow={95}
-                        aria-valuemin={0}
-                        aria-valuemax={100}
-                      >
-                        <p>95%</p>
-                      </div>
-                    </div>
                     <p>Gatsby JS</p>
-                    <div className="progress">
-                      <div
-                        className="progress-bar"
-                        role="progressbar"
-                        style={{ width: "80%" }}
-                        aria-valuenow={80}
-                        aria-valuemin={0}
-                        aria-valuemax={100}
-                      >
-                        <p>80%</p>
-                      </div>
-                    </div>
                     <p>Python</p>
-                    <div className="progress">
-                      <div
-                        className="progress-bar"
-                        role="progressbar"
-                        style={{ width: "75%" }}
-                        aria-valuenow={75}
-                        aria-valuemin={0}
-                        aria-valuemax={100}
-                      >
-                        <p>75%</p>
-                      </div>
-                    </div>
                     <p>Web Scraping</p>
-                    <div className="progress">
-                      <div
-                        className="progress-bar"
-                        role="progressbar"
-                        style={{ width: "90%" }}
-                        aria-valuenow={90}
-                        aria-valuemin={0}
-                        aria-valuemax={100}
-                      >
-                        <p>90%</p>
-                      </div>
-                    </div>
                     <p>Next.js</p>
-                    <div className="progress">
-                      <div
-                        className="progress-bar"
-                        role="progressbar"
-                        style={{ width: "90%" }}
-                        aria-valuenow={90}
-                        aria-valuemin={0}
-                        aria-valuemax={100}
-                      >
-                        <p>90%</p>
-                      </div>
-                    </div>
                     <p>GraphQL</p>
-                    <div className="progress">
-                      <div
-                        className="progress-bar"
-                        role="progressbar"
-                        style={{ width: "90%" }}
-                        aria-valuenow={90}
-                        aria-valuemin={0}
-                        aria-valuemax={100}
-                      >
-                        <p>90%</p>
-                      </div>
-                    </div>
                   </div>
                 </div>
                 {/*End of col lg 6*/}
