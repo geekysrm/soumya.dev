@@ -1,4 +1,6 @@
 const containers = require("remark-containers");
+const headings = require("rehype-autolink-headings");
+// TODO: Make rehype-autolink-headings work
 
 // const withMDX = require("@next/mdx")({
 //   extension: /\.(md|mdx)$/,
@@ -19,7 +21,7 @@ module.exports = withMdxEnhanced({
   defaultLayout: true,
   fileExtensions: ["mdx"],
   remarkPlugins: [containers],
-  rehypePlugins: [],
+  rehypePlugins: [headings],
   extendFrontMatter: {
     process: (mdxContent, frontMatter) => {},
     phase: "prebuild|loader|both",
