@@ -8,6 +8,7 @@
 /* Global Styles */
 body {
   @apply text-gray-800;
+  font-family: "Inter", sans-serif;
 }
 
 /* purgecss start ignore */
