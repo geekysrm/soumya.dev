@@ -1,6 +1,7 @@
 // Base-64 and ROT13 decoder
 import { useState } from "react";
 import Head from "next/head";
+import Link from "next/link";
 import axios from "axios";
 
 const ROT13_API_URL = "https://helloacm.com/api/rot13/?s="; //GET
@@ -105,8 +106,26 @@ export default function Decode() {
               <div className="decoded-text alert alert-secondary">
                 {decodedText}
               </div>
+              <br />
             </>
           )}
+
+          <span className="text-sm">
+            If this helped you, please{" "}
+            <a
+              className="text-blue-500"
+              href="https://coffee.soumya.dev"
+              target="_blank"
+              rel="noreferrer-noopener"
+            >
+              support the website
+            </a>
+            .
+          </span>
+          <br />
+          <Link href="/">
+            <a className="text-sm">← Back to soumya.dev</a>
+          </Link>
           {/*Add copy to clipboard button*/}
         </div>
       </div>
