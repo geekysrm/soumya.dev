@@ -50,7 +50,7 @@ export default function Home() {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarCollapse">
-            <ul className="navbar-nav ml-auto">
+            <ul className="ml-auto navbar-nav">
               <li className="nav-item active">
                 <a className="nav-link" href="#">
                   Home
@@ -406,7 +406,7 @@ export default function Home() {
           <div className="card-deck">
             <div className="card">
               <div className="card-body">
-                <h5 className="card-title text-xl">
+                <h5 className="text-xl card-title">
                   Participation in 2-day hackathon and Git workshop
                 </h5>
                 <p className="card-text">
@@ -427,7 +427,7 @@ export default function Home() {
             </div>
             <div className="card">
               <div className="card-body">
-                <h5 className="card-title text-xl">
+                <h5 className="text-xl card-title">
                   Distinguished Fellow at Hasura
                 </h5>
                 <p className="card-text">
@@ -451,7 +451,7 @@ export default function Home() {
             </div>
             <div className="card">
               <div className="card-body">
-                <h5 className="card-title text-xl">
+                <h5 className="text-xl card-title">
                   Introduction to Modern Application Development
                 </h5>
                 <p className="card-text">
@@ -476,7 +476,7 @@ export default function Home() {
             </div>
             <div className="card">
               <div className="card-body">
-                <h5 className="card-title text-xl">
+                <h5 className="text-xl card-title">
                   National Programming Aptitude Test (NPAT)
                 </h5>
                 <p className="card-text">
@@ -498,7 +498,7 @@ export default function Home() {
             </div>
             <div className="card">
               <div className="card-body">
-                <h5 className="card-title text-xl">
+                <h5 className="text-xl card-title">
                   Network Management Course
                 </h5>
                 <br />
@@ -551,7 +551,7 @@ export default function Home() {
                   alt="Electron Crypto Currency Tracker"
                 />
                 <div className="card-body">
-                  <h5 className="card-title text-xl">
+                  <h5 className="text-xl card-title">
                     Official Website of IIIT Tech Society
                   </h5>
                   <p className="card-text">
@@ -587,7 +587,7 @@ export default function Home() {
                   alt="Electron Crypto Currency Tracker"
                 />
                 <div className="card-body">
-                  <h5 className="card-title text-xl">
+                  <h5 className="text-xl card-title">
                     Electron Crypto Currency Tracker
                   </h5>
                   <p className="card-text">
@@ -617,7 +617,7 @@ export default function Home() {
                   alt="E-bloodbank-app"
                 />
                 <div className="card-body">
-                  <h5 className="card-title text-xl">E-Bloodbank</h5>
+                  <h5 className="text-xl card-title">E-Bloodbank</h5>
                   <p className="card-text">
                     {" "}
                     E-bloodbank is a convenient way to connect blood donors to
@@ -655,7 +655,7 @@ export default function Home() {
                   alt="E-election-app"
                 />
                 <div className="card-body">
-                  <h5 className="card-title text-xl">E-election</h5>
+                  <h5 className="text-xl card-title">E-election</h5>
                   <p className="card-text">
                     I and my teammate made an e-election app that allows users
                     to conduct an election for a given post. For each post,
@@ -693,7 +693,7 @@ export default function Home() {
                   alt="FB-weather-bot"
                 />
                 <div className="card-body">
-                  <h5 className="card-title text-xl">
+                  <h5 className="text-xl card-title">
                     Facebook Real-Time Weather Bot
                   </h5>
                   <p className="card-text">
@@ -729,7 +729,7 @@ export default function Home() {
                   alt="FB-GOT-bot"
                 />
                 <div className="card-body">
-                  <h5 className="card-title text-xl">
+                  <h5 className="text-xl card-title">
                     Facebook Game of Thrones Bot
                   </h5>
                   <p className="card-text">
@@ -774,7 +774,7 @@ export default function Home() {
                   />
                 </a>
                 <div className="card-body">
-                  <h5 className="card-title text-xl">
+                  <h5 className="text-xl card-title">
                     Twitter Retweet/Follow/Like Bot
                   </h5>
                   <p className="card-text">
@@ -811,7 +811,7 @@ export default function Home() {
                   alt="Twitter-clone"
                 />
                 <div className="card-body">
-                  <h5 className="card-title text-xl">Twitter UI Clone</h5>
+                  <h5 className="text-xl card-title">Twitter UI Clone</h5>
                   <p className="card-text">
                     This is a clone of the twitter website UI. It is created
                     using React.JS and material-ui. The timeline page and the
@@ -841,7 +841,7 @@ export default function Home() {
                   alt="Attendance-Manager"
                 />
                 <div className="card-body">
-                  <h5 className="card-title text-xl">Attendance Manager</h5>
+                  <h5 className="text-xl card-title">Attendance Manager</h5>
                   <p className="card-text">
                     Attendance Manager is built using Node JS in server side,
                     Postgres as database, and HTML CSS Bootstrap in front-end.
@@ -871,7 +871,7 @@ export default function Home() {
                   alt="Blood-Group-CPP"
                 />
                 <div className="card-body">
-                  <h5 className="card-title text-xl">
+                  <h5 className="text-xl card-title">
                     Blood Group Database of Odisha using C++ OOP
                   </h5>
                   <p className="card-text">
@@ -905,7 +905,7 @@ export default function Home() {
                   alt="Linux-from-scratch"
                 />
                 <div className="card-body">
-                  <h5 className="card-title text-xl">Linux From Scratch</h5>
+                  <h5 className="text-xl card-title">Linux From Scratch</h5>
                   <p className="card-text">
                     Completed the Linux From Scratch project in 3 weeks time.
                     Understood Linux system fundamentals and built a Linux
@@ -933,7 +933,7 @@ export default function Home() {
         <div id="resume" className="resume-area">
           <div className="container">
             <div className="row justify-content-center">
-              <div className="col-lg-10 text-center">
+              <div className="text-center col-lg-10">
                 <h1>My Resume</h1>
                 <p>You can download my resume by clicking the button below.</p>
                 <a
@@ -1055,7 +1055,7 @@ export default function Home() {
         <div className="footer-area">
           <div className="container">
             <div className="row justify-content-center">
-              <div className="col-lg-8 text-center">
+              <div className="text-center col-lg-8">
                 <p className="copyright">
                   Copyright {new Date().getFullYear()} Soumya Ranjan Mohanty{" "}
                   <br /> <i className="fas fa-code" /> With{" "}
