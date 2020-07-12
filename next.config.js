@@ -1,5 +1,6 @@
 const containers = require("remark-containers");
 const headings = require("rehype-autolink-headings");
+const readingTime = require("reading-time");
 // TODO: Make rehype-autolink-headings work
 
 // const withMDX = require("@next/mdx")({
@@ -23,8 +24,10 @@ module.exports = withMdxEnhanced({
   remarkPlugins: [containers],
   rehypePlugins: [headings],
   extendFrontMatter: {
-    process: (mdxContent, frontMatter) => {},
-    phase: "prebuild|loader|both",
+    process: (mdxContent, frontMatter) => ({
+      readingTime: readingTime(mdxContent),
+    }),
+    phase: "both",
   },
   pageExtensions: ["js", "jsx", "md", "mdx"],
 })(/* your normal nextjs config */);
