@@ -1112,6 +1112,11 @@
   resolved "https://registry.yarnpkg.com/@next/react-refresh-utils/-/react-refresh-utils-9.4.4.tgz#d94cbb3b354a07f1f5b80e554d6b9e34aba99e41"
   integrity sha512-9nKENeWRI6kQk44TbeqleIVtNLfcS3klVUepzl/ZCqzR5Bi06uqBCD277hdVvG/wL1pxA+R/pgJQLqnF5E2wPQ==
 
+"@tailwindcss/typography@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.1.2.tgz#41fb4f862b7810e6c8eb03ad2de465b53380f0c0"
+  integrity sha512-Qc52tzH2HGWhgn1IWyqzQ5GuuyXnEWCKflAZDiDHSYHq/Rhapsdlqd4ItqDdYjtpl8+6EC8/tV9nGfG3jifdPg==
+
 "@types/color-name@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
@@ -5679,11 +5684,6 @@ rehype-slug@^3.0.0:
     hast-util-is-element "^1.0.0"
     hast-util-to-string "^1.0.0"
     unist-util-visit "^2.0.0"
-
-remark-containers@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/remark-containers/-/remark-containers-1.2.0.tgz#e7d135181182d47a20a25adb2f8dbee15a7dd694"
-  integrity sha512-4RDgyvBxERd6oAOV0UKmOvlupqxpB2rkojfxFKab2MJkKoN3CDxdmSvrn7LllX1ZhkEz3UJ1979TEuf9fJ+HFQ==
 
 remark-footnotes@1.0.0:
   version "1.0.0"

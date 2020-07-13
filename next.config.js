@@ -1,4 +1,3 @@
-const containers = require("remark-containers");
 const headings = require("rehype-autolink-headings");
 const readingTime = require("reading-time");
 // TODO: Make rehype-autolink-headings work
@@ -21,7 +20,7 @@ module.exports = withMdxEnhanced({
   layoutPath: "src/layouts",
   defaultLayout: true,
   fileExtensions: ["mdx"],
-  remarkPlugins: [containers],
+  remarkPlugins: [],
   rehypePlugins: [headings],
   extendFrontMatter: {
     process: (mdxContent, frontMatter) => ({
