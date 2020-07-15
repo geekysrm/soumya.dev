@@ -5,6 +5,14 @@ import { parseISO, format } from "date-fns";
 // add SEO, Meta stuff for each blog
 
 // to use prose class more correctly
+//  <article>
+//      <header><h1>{heading}</h1></header>
+//      <div>
+//          <div>{author, time to read, date etc (or incl. this inside<header>)}</div>
+//              <div className={prose classes}>{markdown content}</div>
+//      </div>
+// </article>
+
 export default function Layout(frontMatter) {
   return ({ children: content }) => {
     console.log(frontMatter);
