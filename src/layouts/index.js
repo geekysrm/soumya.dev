@@ -18,9 +18,13 @@ export default function Layout(frontMatter) {
     console.log(frontMatter);
     return (
       <article>
-        <h1 className="text-3xl font-bold">{frontMatter.title}</h1>
-        <span>{frontMatter.readingTime.text}</span>
-        <span>{format(parseISO(frontMatter.date), "MMMM dd, yyyy")}</span>
+        <header>
+          <h1 className="text-3xl font-bold">{frontMatter.title}</h1>
+        </header>
+        <div>
+          {/* <span>{frontMatter.readingTime.text}</span>
+        <span>{format(parseISO(frontMatter.date), "MMMM dd, yyyy")}</span> */}
+        </div>
         <div className="prose lg:prose-xl">{content}</div>
       </article>
     );

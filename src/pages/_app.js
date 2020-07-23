@@ -42,12 +42,12 @@ const MyApp = ({ Component, pageProps }) => {
         <meta name="theme-color" content="#ffffff" />
         {/* <link rel="alternate" type="application/rss+xml" href="/feed.xml" /> */}
       </Head>
-      <SectionContainer>{/* <Header /> */}</SectionContainer>
-      <SectionContainer>
-        <main>
-          <Component {...pageProps} />
-        </main>
-      </SectionContainer>
+      {/*<SectionContainer> <Header /> </SectionContainer>*/}
+      {/* <SectionContainer> */}
+      <main>
+        <Component {...pageProps} />
+      </main>
+      {/* </SectionContainer> */}
     </div>
   );
 };
