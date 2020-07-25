@@ -1,5 +1,7 @@
 import { parseISO, format } from "date-fns";
 
+import Header from "../components/Header";
+
 // To add layout for blog
 // show title, author(me) with photo, date, time to read, nProgressbar, (views?)
 // add SEO, Meta stuff for each blog
@@ -17,16 +19,19 @@ export default function Layout(frontMatter) {
   return ({ children: content }) => {
     console.log(frontMatter);
     return (
-      <article>
-        <header>
-          <h1 className="text-3xl font-bold">{frontMatter.title}</h1>
-        </header>
-        <div>
-          {/* <span>{frontMatter.readingTime.text}</span>
+      <>
+        <Header />
+        <article>
+          <header>
+            <h1 className="text-3xl font-bold">{frontMatter.title}</h1>
+          </header>
+          <div>
+            {/* <span>{frontMatter.readingTime.text}</span>
         <span>{format(parseISO(frontMatter.date), "MMMM dd, yyyy")}</span> */}
-        </div>
-        <div className="prose lg:prose-xl">{content}</div>
-      </article>
+          </div>
+          <div className="prose lg:prose-xl">{content}</div>
+        </article>
+      </>
     );
   };
 }

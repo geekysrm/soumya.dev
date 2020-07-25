@@ -1,3 +1,4 @@
+// New homepage at /
 export default function NewSite() {
   return (
     <div>
