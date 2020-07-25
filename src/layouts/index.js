@@ -83,6 +83,21 @@ export default function Layout(frontMatter) {
               </div> */}
               <div className="flex items-center mt-3">
                 <img
+                  className="w-6 ml-2"
+                  src="/static/images/email.svg"
+                  alt="Buy me a coffee"
+                />
+                <a
+                  className="ml-4"
+                  href="https://tinyletter.com/geekysrm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Subscribe to my newsletter
+                </a>
+              </div>
+              <div className="flex items-center mt-3">
+                <img
                   className="w-10 -mt-2"
                   src="/static/images/coffee.svg"
                   alt="Buy me a coffee"
