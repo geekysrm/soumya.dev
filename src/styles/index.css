@@ -10,3 +10,11 @@ body {
   @apply text-gray-800;
   font-family: "Inter", sans-serif;
 }
+
+/* Change a styles below */
+
+a {
+  background: linear-gradient(transparent 70%, #dbe4ff 0);
+  text-decoration: none;
+  font-weight: 700;
+}
