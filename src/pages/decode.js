@@ -12,14 +12,10 @@ export default function Decode() {
   const [decodedText, setDecodedText] = useState("");
 
   const handleDecode = async () => {
-    console.log("handleDecode button clicked");
-    console.log(decodeType);
-
     if (decodeType === "rot13") {
       // make API call to decode rot13
       try {
         const res = await axios.get(`${ROT13_API_URL}${encodedText}`);
-        console.log("rot13 decoded", res.data);
         setDecodedText(res.data);
       } catch (error) {
         console.error("Some error occured while decoding", error);
@@ -29,7 +25,6 @@ export default function Decode() {
       // do base64 decoding
       try {
         const base64DecodedText = window.atob(encodedText);
-        console.log("base64 decoded", base64DecodedText);
         setDecodedText(base64DecodedText);
       } catch (error) {
         console.error("Some error occured while decoding", error);
