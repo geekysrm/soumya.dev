@@ -1123,6 +1123,7 @@ export default function Home() {
           background-image: url("./img/image5.jpg");
           min-height: 100%;
           height: 685px;
+          min-width: 100%;
         }
 
         .pimg2 {

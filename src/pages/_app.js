@@ -1,11 +1,13 @@
 import { useEffect } from "react";
-import Router from "next/router";
+import Router, { useRouter } from "next/router";
 import Head from "next/head";
 import SectionContainer from "../components/SectionContainer";
 import * as gtag from "../lib/gtag";
 import "../styles/index.css";
 
 const MyApp = ({ Component, pageProps }) => {
+  const router = useRouter();
+
   useEffect(() => {
     const handleRouteChange = (url) => {
       gtag.pageview(url);
@@ -43,11 +45,17 @@ const MyApp = ({ Component, pageProps }) => {
         {/* <link rel="alternate" type="application/rss+xml" href="/feed.xml" /> */}
       </Head>
       {/*<SectionContainer> <Header /> </SectionContainer>*/}
-      {/* <SectionContainer> */}
-      <main>
-        <Component {...pageProps} />
-      </main>
-      {/* </SectionContainer> */}
+      {router.pathname !== "/" ? (
+        <SectionContainer>
+          <main>
+            <Component {...pageProps} />
+          </main>
+        </SectionContainer>
+      ) : (
+        <main>
+          <Component {...pageProps} />
+        </main>
+      )}
     </div>
   );
 };
