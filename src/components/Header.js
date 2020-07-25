@@ -8,7 +8,7 @@ export default function Header() {
           <a aria-label="Home - soumya.dev">
             {/* <TailwindMark className="h-6 sm:hidden" />
             <TailwindLogo className="hidden h-6 sm:block" /> */}
-            LOGO HERE
+            geekySRM
           </a>
         </Link>
       </div>
