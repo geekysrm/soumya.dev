@@ -91,7 +91,7 @@ export default function Home() {
         </nav>
         <div className="announcement">
           💡Note: This site is under construction 🚧. I'm in the middle of
-          building a new version in <b>React and Gatsby</b>. Please excuse my
+          building a new version in <b>React and Next.js</b>. Please excuse my
           mess!
         </div>
         <br />
@@ -166,7 +166,7 @@ export default function Home() {
             .
             <br />
             I love coding and participating in hackathons. I have knowledge of
-            various web technologies and have some projects to my name.
+            various web technologies and have build many projects.
             <br />I love writing and I maintain a{" "}
             <a href="https://geekysrm.github.io/blog" target="_blank">
               blog
