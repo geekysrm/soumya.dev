@@ -26,16 +26,16 @@ export default function Layout(frontMatter) {
       <>
         <Header />
         <article className="flex justify-between">
-          <div className="w-2/3">
+          <div className="md:w-2/3">
             <header>
               <h1 className="text-3xl font-bold">{frontMatter.title}</h1>
             </header>
-            <div>
-              {/* <span>{frontMatter.readingTime.text}</span>
-        <span>{format(parseISO(frontMatter.date), "MMMM dd, yyyy")}</span> */}
+            <div className="mt-2">
+              <span>{frontMatter.readingTime.text}</span>
+              <span>{format(parseISO(frontMatter.date), "MMMM dd, yyyy")}</span>
             </div>
             {/* Add more responsive styles to {content} below */}
-            <div className="prose lg:prose-lg">{content}</div>
+            <div className="mt-3 prose lg:prose-lg">{content}</div>
           </div>
           {/* TODO: Display author info in other way on screens smaller than below breakpoint */}
           <aside className="flex-1 hidden h-full px-5 py-3 ml-4 bg-yellow-200 md:block">
@@ -69,7 +69,6 @@ export default function Layout(frontMatter) {
                 <NewsLetterForm />
               </div> */}
               <div className="flex items-center mt-3">
-                {/* Find & change color of below icon in iconfinder.com */}
                 <img
                   className="w-10 -mt-2"
                   src="/img/coffee.svg"
@@ -90,6 +89,7 @@ export default function Layout(frontMatter) {
           </aside>
         </article>
         {/* Comments below */}
+        <hr className="mt-12 mb-4" />
         <Utterances repo="geekysrm/soumya.dev" theme="github-light" />
       </>
     );
