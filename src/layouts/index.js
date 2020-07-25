@@ -1,6 +1,7 @@
 // Layout for blog post
 import { parseISO, format } from "date-fns";
 import Link from "next/link";
+import Head from "next/head";
 
 import Header from "../components/Header";
 import Utterances from "../components/Utterances";
@@ -16,6 +17,13 @@ export default function Layout(frontMatter) {
     console.log(frontMatter);
     return (
       <>
+        <Head>
+          <title>{frontMatter.title} - Soumya's blog</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+        </Head>
         <Header />
         <article className="flex justify-between">
           <div className="md:w-2/3">
@@ -56,8 +64,19 @@ export default function Layout(frontMatter) {
                 >
                   Google certified MWS
                 </a>{" "}
-                and I like to tinker around with new technologies, write about
-                them and build projects with them.
+                and I like to tinker around with new technologies,{" "}
+                <Link href="/blog">
+                  <a>write</a>
+                </Link>{" "}
+                about them and build{" "}
+                <a
+                  href="https://github.com/geekysrm?tab=repositories&type=source"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  projects
+                </a>{" "}
+                with them.
               </p>
               {/* TODO: Add newsletter form */}
               {/* <div className="px-0 mt-3 bg-gray-100">
