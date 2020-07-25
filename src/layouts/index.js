@@ -1,6 +1,7 @@
 import { parseISO, format } from "date-fns";
 
 import Header from "../components/Header";
+import Utterances from "../components/Utterances";
 
 // To add layout for blog
 // show title, author(me) with photo, date, time to read, nProgressbar, (views?)
@@ -31,6 +32,7 @@ export default function Layout(frontMatter) {
           </div>
           <div className="prose lg:prose-xl">{content}</div>
         </article>
+        <Utterances repo="geekysrm/soumya.dev" theme="github-light" />
       </>
     );
   };
