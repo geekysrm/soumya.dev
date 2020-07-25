@@ -1,3 +1,4 @@
+// Layout for blog post
 import { parseISO, format } from "date-fns";
 import Link from "next/link";
 
@@ -37,7 +38,7 @@ export default function Layout(frontMatter) {
             <div className="prose lg:prose-lg">{content}</div>
           </div>
           {/* TODO: Display author info in other way on screens smaller than below breakpoint */}
-          <aside className="flex-1 hidden px-5 py-3 ml-4 bg-blue-200 md:block">
+          <aside className="flex-1 hidden h-full px-5 py-3 ml-4 bg-yellow-200 md:block">
             <h3 className="text-xl font-semibold">Author</h3>
             <div>
               <div>
@@ -50,7 +51,7 @@ export default function Layout(frontMatter) {
               <p className="mt-3">
                 I'm{" "}
                 <Link href="/">
-                  <a className="hover:underline">Soumya</a>
+                  <a>Soumya</a>
                 </Link>
                 , a software engineer and open-sourcer. I am a{" "}
                 <a
@@ -63,17 +64,19 @@ export default function Layout(frontMatter) {
                 and I like to tinker around with new technologies, write about
                 them and build projects with them.
               </p>
-              <div className="mt-3">
+              {/* TODO: Add newsletter form */}
+              {/* <div className="px-0 mt-3 bg-gray-100">
                 <NewsLetterForm />
-              </div>
+              </div> */}
               <div className="flex items-center mt-3">
                 {/* Find & change color of below icon in iconfinder.com */}
                 <img
-                  className="w-10"
+                  className="w-10 -mt-2"
                   src="/img/coffee.svg"
                   alt="Buy me a coffee"
                 />
                 <a
+                  className="ml-2"
                   href="https://coffee.soumya.dev"
                   target="_blank"
                   rel="noopener noreferrer"

@@ -1,6 +1,6 @@
 export default function NewsLetterForm() {
   return (
-    <>
+    <div className="">
       <strong>Join the newsletter</strong>
       <form
         className=""
@@ -14,6 +14,7 @@ export default function NewsLetterForm() {
         </p>
         <p>
           <input
+            required
             type="text"
             style={{ width: "140px" }}
             name="email"
@@ -23,6 +24,6 @@ export default function NewsLetterForm() {
         <input type="hidden" defaultValue={1} name="embed" />
         <input type="submit" defaultValue="Subscribe" />
       </form>
-    </>
+    </div>
   );
 }
