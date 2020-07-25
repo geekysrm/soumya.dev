@@ -47,7 +47,7 @@ export default function Layout(frontMatter) {
                 <img
                   className="w-24 mt-3 rounded-full"
                   alt="Soumya Ranjan Mohanty (geekySRM)"
-                  src="https://pbs.twimg.com/profile_images/1172203214797725697/z4XfgoXy_400x400.jpg"
+                  src="/static/images/soumya.jpg"
                 />
               </div>
               <p className="mt-3">
