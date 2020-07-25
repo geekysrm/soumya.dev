@@ -84,7 +84,7 @@ export default function Layout(frontMatter) {
               <div className="flex items-center mt-3">
                 <img
                   className="w-10 -mt-2"
-                  src="/img/coffee.svg"
+                  src="/static/images/coffee.svg"
                   alt="Buy me a coffee"
                 />
                 <a
