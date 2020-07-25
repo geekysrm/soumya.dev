@@ -8,9 +8,8 @@ import Utterances from "../components/Utterances";
 import NewsLetterForm from "../components/NewsLetterForm";
 import IconClock from "../components/SVGIcons/IconClock";
 
-// To add layout for blog
-// show title, author(me) with photo, date, time to read, nProgressbar, (views?)
-// add SEO, Meta stuff for each blog
+// show nProgressbar, (views?)
+// add SEO, Meta stuff (twitter and og and others) for each blog
 
 export default function Layout(frontMatter) {
   return ({ children: content }) => {
@@ -18,6 +17,7 @@ export default function Layout(frontMatter) {
       <>
         <Head>
           <title>{frontMatter.title} - Soumya's blog</title>
+          <meta name="author" content="Soumya Ranjan Mohanty (geekySRM)"></meta>
           <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"
