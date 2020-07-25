@@ -5,19 +5,11 @@ import Link from "next/link";
 import Header from "../components/Header";
 import Utterances from "../components/Utterances";
 import NewsLetterForm from "../components/NewsLetterForm";
+import IconClock from "../components/SVGIcons/IconClock";
 
 // To add layout for blog
 // show title, author(me) with photo, date, time to read, nProgressbar, (views?)
 // add SEO, Meta stuff for each blog
-
-// to use prose class more correctly
-//  <article>
-//      <header><h1>{heading}</h1></header>
-//      <div>
-//          <div>{author, time to read, date etc (or incl. this inside<header>)}</div>
-//              <div className={prose classes}>{markdown content}</div>
-//      </div>
-// </article>
 
 export default function Layout(frontMatter) {
   return ({ children: content }) => {
@@ -30,12 +22,15 @@ export default function Layout(frontMatter) {
             <header>
               <h1 className="text-3xl font-bold">{frontMatter.title}</h1>
             </header>
-            <div className="mt-2">
-              <span>{frontMatter.readingTime.text}</span>
+            <div className="flex items-center mt-2 font-medium text-gray-600 text-md">
               <span>{format(parseISO(frontMatter.date), "MMMM dd, yyyy")}</span>
+              <div className="flex items-center ml-5">
+                <IconClock className="w-4 h-4" />
+                <span className="ml-1">{frontMatter.readingTime.text}</span>
+              </div>
             </div>
             {/* Add more responsive styles to {content} below */}
-            <div className="mt-3 prose lg:prose-lg">{content}</div>
+            <div className="mt-5 prose lg:prose-lg">{content}</div>
           </div>
           {/* TODO: Display author info in other way on screens smaller than below breakpoint */}
           <aside className="flex-1 hidden h-full px-5 py-3 ml-4 bg-yellow-200 md:block">
