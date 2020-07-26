@@ -48,6 +48,7 @@ export default function Layout(frontMatter) {
           /> */}
           <meta property="og:image" content={socialImage} />
           {/* Twitter meta properties below: */}
+          <meta name="twitter:card" content="summary_large_image" />
           <meta
             name="twitter:title"
             content={`${frontMatter.title} - Soumya's blog`}
