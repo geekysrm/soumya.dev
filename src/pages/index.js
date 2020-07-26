@@ -91,8 +91,8 @@ export default function Home() {
         </nav>
         <div className="announcement">
           💡Note: This site is under construction 🚧. I'm in the middle of
-          building a new version in <b>React and Next.js</b>. Please excuse my
-          mess!
+          building a new version using <b>React and Next.js</b>. Please excuse
+          my mess!
         </div>
         <br />
         <br />

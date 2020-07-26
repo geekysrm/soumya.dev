@@ -2,6 +2,7 @@
 import { parseISO, format } from "date-fns";
 import Link from "next/link";
 import Head from "next/head";
+import getShareImage from "@jlengstorf/get-share-image";
 
 import Header from "../components/Header";
 import Utterances from "../components/Utterances";
@@ -12,6 +13,25 @@ import IconClock from "../components/SVGIcons/IconClock";
 // add SEO, Meta stuff (twitter and og and others) for each blog
 
 export default function Layout(frontMatter) {
+  const tags = frontMatter.tags
+    .split(",")
+    .map((tag) => `#${tag.trim()}`)
+    .join(" ");
+
+  const socialImage = getShareImage({
+    title: frontMatter.title,
+    tagline: tags,
+    cloudName: "geekysrm",
+    imagePublicID: "soumya.dev/post-og-image",
+    titleFont: "futura",
+    taglineFont: "futura",
+    textColor: "ffffff",
+    taglineFontSize: 28,
+    taglineFont: "Roboto%20Mono",
+  });
+
+  console.log(socialImage);
+
   return ({ children: content }) => {
     return (
       <>
