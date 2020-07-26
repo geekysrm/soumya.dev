@@ -30,14 +30,32 @@ export default function Layout(frontMatter) {
     taglineFont: "Roboto%20Mono",
   });
 
-  console.log(socialImage);
-
   return ({ children: content }) => {
     return (
       <>
         <Head>
           <title>{frontMatter.title} - Soumya's blog</title>
           <meta name="author" content="Soumya Ranjan Mohanty (geekySRM)"></meta>
+          <meta
+            property="og:title"
+            content={`${frontMatter.title} - Soumya's blog`}
+          />
+          <meta property="og:description" content={frontMatter.description} />
+          {/* To add og:url */}
+          {/* <meta
+            property="og:url"
+            content={""}
+          /> */}
+          <meta property="og:image" content={socialImage} />
+          {/* Twitter meta properties below: */}
+          <meta
+            name="twitter:title"
+            content={`${frontMatter.title} - Soumya's blog`}
+          />
+          <meta name="twitter:description" content={frontMatter.description} />
+          {/* To add twitter:url */}
+          {/* <meta name="twitter:url" content="" /> */}
+          <meta name="twitter:image" content={socialImage} />
           <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"
