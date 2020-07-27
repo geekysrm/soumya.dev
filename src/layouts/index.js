@@ -14,6 +14,9 @@ import {
   FacebookShareButton,
   LinkedinShareButton,
   TwitterShareButton,
+  TwitterIcon,
+  FacebookIcon,
+  LinkedinIcon,
 } from "react-share";
 
 // show nProgressbar, (views?)
@@ -170,21 +173,24 @@ export default function Layout(frontMatter) {
             </span>
           </a>
         </div>
-        <div>
-          <TwitterShareButton title={title} via="geekysrm" url={url}>
-            Share on Twitter
-          </TwitterShareButton>
-          <FacebookShareButton url={url} quote={title} via="geekysrm">
-            Share on Facebook
-          </FacebookShareButton>
-          <LinkedinShareButton
-            title={title}
-            summary={frontMatter.description}
-            url={url}
-            source={"Soumya's website"}
-          >
-            LinkedIn
-          </LinkedinShareButton>
+        <div className="flex items-center mb-4">
+          <span className="text-lg font-semibold">Share article:</span>
+          <div className="flex ml-2 space-x-1">
+            <TwitterShareButton title={title} via="geekysrm" url={url}>
+              <TwitterIcon size={32} />
+            </TwitterShareButton>
+            <FacebookShareButton url={url} quote={title} via="geekysrm">
+              <FacebookIcon size={32} />
+            </FacebookShareButton>
+            <LinkedinShareButton
+              title={title}
+              summary={frontMatter.description}
+              url={url}
+              source={"Soumya's blog"}
+            >
+              <LinkedinIcon size={32} />
+            </LinkedinShareButton>
+          </div>
         </div>
 
         <Utterances repo="geekysrm/soumya.dev" theme="github-light" />
