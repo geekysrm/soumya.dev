@@ -69,7 +69,9 @@ export default function Layout(frontMatter) {
         <article className="flex flex-col justify-between md:flex-row">
           <div className="md:w-2/3">
             <header>
-              <h1 className="text-3xl font-bold">{frontMatter.title}</h1>
+              <h1 className="text-3xl font-bold leading-snug md:text-4xl">
+                {frontMatter.title}
+              </h1>
             </header>
             <div className="flex items-center mt-2 font-medium text-gray-600 text-md">
               <span>{format(parseISO(frontMatter.date), "MMMM dd, yyyy")}</span>
