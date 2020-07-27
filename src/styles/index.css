@@ -22,6 +22,11 @@ a:hover {
   text-decoration: none;
 }
 
+/* Text highlighted using `` */
+code {
+  background-color: #fefcbf;
+}
+
 /* Prism styles */
 /**
  * Dracula Theme originally by Zeno Rocha [@zenorocha]
