@@ -8,6 +8,7 @@ import Header from "../components/Header";
 import Utterances from "../components/Utterances";
 import NewsLetterForm from "../components/NewsLetterForm";
 import IconClock from "../components/SVGIcons/IconClock";
+import IconEdit from "../components/SVGIcons/IconEdit";
 import MetaTags from "../components/MetaTags";
 
 // show nProgressbar, (views?)
@@ -149,7 +150,20 @@ export default function Layout(frontMatter) {
           </aside>
         </article>
         {/* Comments below */}
-        <hr className="mt-12 mb-4" />
+        {/* <hr className="mt-12 mb-4" /> */}
+        <div className="flex items-center mt-12 mb-4">
+          <div className="flex-grow mr-4 border-t"></div>
+          <a
+            href={`https://github.com/geekysrm/soumya.dev/edit/master/src/pages/${slug}/index.mdx`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="flex items-center mr-5 text-sm text-gray-700">
+              <IconEdit className="w-3 h-3 mr-1" />
+              Edit post on GitHub
+            </span>
+          </a>
+        </div>
         <Utterances repo="geekysrm/soumya.dev" theme="github-light" />
       </>
     );
