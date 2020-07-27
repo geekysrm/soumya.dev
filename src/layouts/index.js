@@ -72,7 +72,7 @@ export default function Layout(frontMatter) {
             <div className="mt-5 prose lg:prose-lg">{content}</div>
           </div>
           {/* TODO: Display author info in other way on screens smaller than below breakpoint */}
-          <aside className="flex-1 h-full px-5 py-3 ml-4 bg-yellow-200 md:block">
+          <aside className="flex-1 h-full px-5 py-3 bg-yellow-200 md:ml-4 md:block">
             <h3 className="text-xl font-semibold">Author</h3>
             <div>
               <div>
