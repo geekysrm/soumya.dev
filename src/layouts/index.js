@@ -177,6 +177,14 @@ export default function Layout(frontMatter) {
           <FacebookShareButton url={url} quote={title} via="geekysrm">
             Share on Facebook
           </FacebookShareButton>
+          <LinkedinShareButton
+            title={title}
+            summary={frontMatter.description}
+            url={url}
+            source={"Soumya's website"}
+          >
+            LinkedIn
+          </LinkedinShareButton>
         </div>
 
         <Utterances repo="geekysrm/soumya.dev" theme="github-light" />
