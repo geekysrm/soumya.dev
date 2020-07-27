@@ -33,8 +33,9 @@ export default function Layout(frontMatter) {
     titleBottomOffset: 300,
     taglineTopOffset: 420,
   });
-
-  console.log(socialImage);
+  const resourcePathArray = frontMatter.__resourcePath.split("/");
+  const slug = resourcePathArray[resourcePathArray.length - 2];
+  console.log(slug);
 
   return ({ children: content }) => {
     return (
@@ -47,12 +48,10 @@ export default function Layout(frontMatter) {
             content={`${frontMatter.title} - Soumya's blog`}
           />
           <meta property="og:description" content={frontMatter.description} />
-          {/* To add og:url */}
-          {/* <meta
-            property="og:url"
-            content={""}
-          /> */}
+          <meta property="og:type" content="article" />
+          <meta property="og:url" content={`https://soumya.dev/${slug}`} />
           <meta property="og:image" content={socialImage} />
+
           {/* Twitter meta properties below: */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta
@@ -61,7 +60,7 @@ export default function Layout(frontMatter) {
           />
           <meta name="twitter:description" content={frontMatter.description} />
           {/* To add twitter:url */}
-          {/* <meta name="twitter:url" content="" /> */}
+          <meta name="twitter:url" content={`https://soumya.dev/${slug}`} />
           <meta name="twitter:image" content={socialImage} />
           <meta
             name="viewport"
