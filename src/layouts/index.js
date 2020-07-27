@@ -28,7 +28,13 @@ export default function Layout(frontMatter) {
     textColor: "ffffff",
     taglineFontSize: 28,
     taglineFont: "Roboto%20Mono",
+    textLeftOffset: 500,
+    textAreaWidth: 800,
+    titleBottomOffset: 300,
+    taglineTopOffset: 420,
   });
+
+  console.log(socialImage);
 
   return ({ children: content }) => {
     return (
