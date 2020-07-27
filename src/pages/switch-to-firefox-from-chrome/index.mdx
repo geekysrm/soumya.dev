@@ -18,9 +18,48 @@ console.log(x + 20);
 <span>Hello</span>
 ```
 
+```jsx
+// Add new /blog here
+import Link from "next/link";
+
+export default function Blog() {
+  return (
+    <div>
+      <center>
+        Please head on to{" "}
+        <a
+          className="text-blue-500"
+          href="https://geekysrm.github.io/blog"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          this website
+        </a>{" "}
+        or{" "}
+        <a
+          className="text-blue-500"
+          href="https://medium.com/@geekysrm"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Medium
+        </a>{" "}
+        to view my posts.
+        <br />
+        <Link href="/">
+          <a className="text-sm hover:underline">← Back to soumya.dev</a>
+        </Link>
+      </center>
+    </div>
+  );
+}
+```
+
 <Button />
 
 Mumblecore fanny pack microdosing leggings forage master cleanse, lumbersexual shabby chic mlkshk la croix. Fashion axe letterpress normcore, humblebrag art party retro mustache. Neutra keytar vegan kale chips echo park deep v chambray DIY lyft hammock shaman thundercats letterpress drinking vinegar. Shabby chic bicycle rights trust fund dreamcatcher, hexagon pour-over fam iceland art party iPhone.
+
+## About
 
 Yuccie wolf squid before they sold out photo booth tumeric pok pok. Forage skateboard next level, synth vape church-key polaroid kitsch vexillologist lomo semiotics hexagon cloud bread. Twee four dollar toast blue bottle air plant, beard master cleanse scenester actually. Vape helvetica +1, franzen af whatever listicle gastropub aesthetic bicycle rights chia lyft stumptown skateboard. Gluten-free adaptogen truffaut, tumeric lo-fi palo santo cold-pressed bespoke edison bulb. Ugh vice celiac tofu mustache drinking vinegar.
 

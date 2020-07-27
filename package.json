@@ -22,11 +22,11 @@
     "react-dom": "16.13.1",
     "react-share": "^4.2.1",
     "reading-time": "^1.2.0",
-    "rehype-autolink-headings": "^4.0.0",
-    "rehype-slug": "^3.0.0"
+    "rehype-autolink-headings": "^4.0.0"
   },
   "devDependencies": {
     "postcss-preset-env": "^6.7.0",
+    "rehype": "^11.0.0",
     "tailwindcss": "^1.4.6"
   }
 }

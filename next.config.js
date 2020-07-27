@@ -1,6 +1,7 @@
 const headings = require("rehype-autolink-headings");
 const readingTime = require("reading-time");
-// TODO: Make rehype-autolink-headings work
+const mdxPrism = require("mdx-prism");
+// TODO: Make rehype-autolink-headings and mdxPrism work
 
 // const withMDX = require("@next/mdx")({
 //   extension: /\.(md|mdx)$/,
@@ -21,7 +22,7 @@ module.exports = withMdxEnhanced({
   defaultLayout: true,
   fileExtensions: ["mdx"],
   remarkPlugins: [],
-  rehypePlugins: [headings],
+  rehypePlugins: [headings, mdxPrism],
   extendFrontMatter: {
     process: (mdxContent, frontMatter) => ({
       readingTime: readingTime(mdxContent),
