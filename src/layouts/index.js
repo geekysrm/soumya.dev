@@ -8,9 +8,10 @@ import Header from "../components/Header";
 import Utterances from "../components/Utterances";
 import NewsLetterForm from "../components/NewsLetterForm";
 import IconClock from "../components/SVGIcons/IconClock";
+import MetaTags from "../components/MetaTags";
 
 // show nProgressbar, (views?)
-// add SEO, Meta stuff (twitter and og and others) for each blog
+// more SEO stuff to be added if needed
 
 export default function Layout(frontMatter) {
   const tags = frontMatter.tags
@@ -33,40 +34,22 @@ export default function Layout(frontMatter) {
     titleBottomOffset: 300,
     taglineTopOffset: 420,
   });
+
   const resourcePathArray = frontMatter.__resourcePath.split("/");
   const slug = resourcePathArray[resourcePathArray.length - 2];
-  console.log(slug);
 
   return ({ children: content }) => {
     return (
       <>
         <Head>
-          <title>{frontMatter.title} - Soumya's blog</title>
-          <meta name="author" content="Soumya Ranjan Mohanty (geekySRM)"></meta>
-          <meta
-            property="og:title"
-            content={`${frontMatter.title} - Soumya's blog`}
-          />
-          <meta property="og:description" content={frontMatter.description} />
-          <meta property="og:type" content="article" />
-          <meta property="og:url" content={`https://soumya.dev/${slug}`} />
-          <meta property="og:image" content={socialImage} />
-
-          {/* Twitter meta properties below: */}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta
-            name="twitter:title"
-            content={`${frontMatter.title} - Soumya's blog`}
-          />
-          <meta name="twitter:description" content={frontMatter.description} />
-          {/* To add twitter:url */}
-          <meta name="twitter:url" content={`https://soumya.dev/${slug}`} />
-          <meta name="twitter:image" content={socialImage} />
-          <meta name="twitter:site" content="@geekysrm" />
-          <meta name="twitter:creator" content="@geekysrm" />
-          <meta
-            name="viewport"
-            content="initial-scale=1.0, width=device-width"
+          <MetaTags
+            title={`${frontMatter.title} - Soumya's blog`}
+            author="Soumya Ranjan Mohanty (geekySRM)"
+            description={frontMatter.description}
+            type="article"
+            url={`https://soumya.dev/${slug}`}
+            image={socialImage}
+            twitterHandle="@geekysrm"
           />
         </Head>
         <Header />
