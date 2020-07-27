@@ -10,6 +10,11 @@ import NewsLetterForm from "../components/NewsLetterForm";
 import IconClock from "../components/SVGIcons/IconClock";
 import IconEdit from "../components/SVGIcons/IconEdit";
 import MetaTags from "../components/MetaTags";
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+} from "react-share";
 
 // show nProgressbar, (views?)
 // more SEO stuff to be added if needed
@@ -38,6 +43,7 @@ export default function Layout(frontMatter) {
 
   const resourcePathArray = frontMatter.__resourcePath.split("/");
   const slug = resourcePathArray[resourcePathArray.length - 2];
+  const url = `https://soumya.dev/${slug}`;
 
   const title = `${frontMatter.title} - Soumya's blog`;
 
@@ -51,7 +57,7 @@ export default function Layout(frontMatter) {
             author="Soumya Ranjan Mohanty (geekySRM)"
             description={frontMatter.description}
             type="article"
-            url={`https://soumya.dev/${slug}`}
+            url={url}
             image={socialImage}
             twitterHandle="@geekysrm"
           />
@@ -164,6 +170,15 @@ export default function Layout(frontMatter) {
             </span>
           </a>
         </div>
+        <div>
+          <TwitterShareButton title={title} via="geekysrm" url={url}>
+            Share on Twitter
+          </TwitterShareButton>
+          <FacebookShareButton url={url} quote={title} via="geekysrm">
+            Share on Facebook
+          </FacebookShareButton>
+        </div>
+
         <Utterances repo="geekysrm/soumya.dev" theme="github-light" />
       </>
     );
