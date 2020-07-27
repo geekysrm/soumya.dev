@@ -62,6 +62,8 @@ export default function Layout(frontMatter) {
           {/* To add twitter:url */}
           <meta name="twitter:url" content={`https://soumya.dev/${slug}`} />
           <meta name="twitter:image" content={socialImage} />
+          <meta name="twitter:site" content="@geekysrm" />
+          <meta name="twitter:creator" content="@geekysrm" />
           <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"
