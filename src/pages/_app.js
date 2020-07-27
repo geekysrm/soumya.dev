@@ -3,7 +3,8 @@ import Router, { useRouter } from "next/router";
 import Head from "next/head";
 import SectionContainer from "../components/SectionContainer";
 import * as gtag from "../lib/gtag";
-import "../styles/index.css";
+import "../styles/tailwind.css";
+import "../styles/styles.css";
 
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
