@@ -38,12 +38,15 @@ export default function Layout(frontMatter) {
   const resourcePathArray = frontMatter.__resourcePath.split("/");
   const slug = resourcePathArray[resourcePathArray.length - 2];
 
+  const title = `${frontMatter.title} - Soumya's blog`;
+
   return ({ children: content }) => {
     return (
       <>
         <Head>
+          <title>{title}</title>
           <MetaTags
-            title={`${frontMatter.title} - Soumya's blog`}
+            title={title}
             author="Soumya Ranjan Mohanty (geekySRM)"
             description={frontMatter.description}
             type="article"

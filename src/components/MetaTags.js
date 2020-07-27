@@ -9,7 +9,6 @@ export default function MetaTags({
 }) {
   return (
     <>
-      <title>{title}</title>
       <meta name="author" content={author}></meta>
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
