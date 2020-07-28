@@ -20,6 +20,7 @@
     "next-mdx-enhanced": "^3.0.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-player": "^2.6.0",
     "react-share": "^4.2.1",
     "react-twitter-embed": "^3.0.3",
     "reading-time": "^1.2.0",

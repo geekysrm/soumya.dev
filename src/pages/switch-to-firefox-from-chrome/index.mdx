@@ -5,6 +5,7 @@ date: "2020-07-25"
 tags: "tools, productivity"
 ---
 
+import ReactPlayer from "react-player";
 import { TwitterTweetEmbed } from "react-twitter-embed";
 import Button from "../../components/Button";
 
@@ -63,16 +64,9 @@ Mumblecore fanny pack microdosing leggings forage master cleanse, lumbersexual s
 
 See more info in the youtube video below:
 
-<iframe
-  className="max-w-full"
-  src="https://www.youtube-nocookie.com/embed/IJkXM44a-2A"
-  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-  width={560}
-  height={315}
-  frameBorder={0}
-  iv_load_policy={3}
-  modestbranding={1}
+<ReactPlayer
+  url="https://www.youtube.com/watch?v=IJkXM44a-2A"
+  controls={true}
 />
 
 ## About
