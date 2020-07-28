@@ -64,10 +64,21 @@ Mumblecore fanny pack microdosing leggings forage master cleanse, lumbersexual s
 
 See more info in the youtube video below:
 
-<ReactPlayer
-  url="https://www.youtube.com/watch?v=IJkXM44a-2A"
-  controls={true}
-/>
+<div>
+  <style
+    dangerouslySetInnerHTML={{
+      __html:
+        ".embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }",
+    }}
+  />
+  <div className="embed-container">
+    <iframe
+      src="https://www.youtube.com/embed/QILiHiTD3uc"
+      allowFullScreen
+      frameBorder={0}
+    />
+  </div>
+</div>
 
 ## About
 
