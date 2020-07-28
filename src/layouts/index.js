@@ -85,8 +85,6 @@ export default function Layout(frontMatter) {
           </div>
           <AuthorCard />
         </article>
-        {/* Comments below */}
-        {/* <hr className="mt-12 mb-4" /> */}
         <div className="flex items-center mt-12 mb-4">
           <div className="flex-grow mr-4 border-t"></div>
           <a
@@ -119,7 +117,7 @@ export default function Layout(frontMatter) {
             </LinkedinShareButton>
           </div>
         </div>
-
+        {/* Comments below */}
         <Utterances repo="geekysrm/soumya.dev" theme="github-light" />
       </>
     );
