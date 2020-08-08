@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -92,8 +93,11 @@ export default function Home() {
         <div className="announcement">
           💡Note: This site is under construction 🚧. I'm in the middle of
           building a new version using <b>React and Next.js</b>. Please excuse
-          my mess!
-        </div>
+          my mess!<br />
+          👀 Sneak peek <Link href="/switch-to-firefox-from-chrome">
+            <a className="hover:text-gray-400 announcement-link">here!</a>
+          </Link>
+          </div>
         <br />
         <br />
         <div className="pimg1">
