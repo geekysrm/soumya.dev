@@ -21,7 +21,7 @@ const MyApp = ({ Component, pageProps }) => {
   }, []);
 
   return (
-    <div className="antialiased bg-gray-200">
+    <div className="h-screen antialiased bg-gray-200">
       <Head>
         <link
           rel="apple-touch-icon"
