@@ -65,7 +65,7 @@ export default function Decode() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <h2 className="text-3xl font-semibold header">Welcome to decoder</h2>
+        <h2 className="mb-3 text-3xl font-semibold header ">Welcome to decoder</h2>
         <div className="form">
           <h4 className="mb-2 text-xl font-semibold">Select type</h4>
           <div className="form-group">
