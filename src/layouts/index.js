@@ -11,7 +11,6 @@ import {
   LinkedinIcon,
 } from "react-share";
 
-import Header from "../components/Header";
 import Utterances from "../components/Utterances";
 import NewsLetterForm from "../components/NewsLetterForm";
 import IconClock from "../components/SVGIcons/IconClock";
@@ -65,7 +64,6 @@ export default function Layout(frontMatter) {
             twitterHandle="@geekysrm"
           />
         </Head>
-        <Header />
         <article className="flex flex-col justify-between md:flex-row">
           <div className="md:w-2/3">
             <header>
