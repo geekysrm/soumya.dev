@@ -4,33 +4,43 @@ import normalize from "normalize-path";
 import BlogListItem from "../components/BlogListItem";
 import { frontMatter as blogPosts } from "./**/index.mdx";
 
+//TODO: Add search blog posts(algolia docsearch?)
+//TODO: Search post by tags
+
 export default function Blog() {
   return (
     <div>
-      <h2>Hello</h2>
-      {blogPosts.map((blogPost) => {
-        const {
-          title,
-          description,
-          date,
-          readingTime,
-          tags,
-          __resourcePath,
-        } = blogPost;
-        const resourcePathArray = normalize(__resourcePath).split("/");
-        const slug = resourcePathArray[resourcePathArray.length - 2];
-        return (
-          <BlogListItem
-            key={slug}
-            title={title}
-            description={description}
-            date={date}
-            readingTime={readingTime.text}
-            tags={tags}
-            slug={slug}
-          />
-        );
-      })}
+      <h1 className="text-3xl font-bold leading-snug md:text-4xl">Blog</h1>
+      <h2 className="text-lg text-gray-600">
+        Articles, tutorials, snippets, reflections, and everything else.
+      </h2>
+      {/* Searcg blog text box and tags go here */}
+      <div className="mt-2">
+        {blogPosts.map((blogPost) => {
+          const {
+            title,
+            description,
+            date,
+            readingTime,
+            tags,
+            __resourcePath,
+          } = blogPost;
+          const resourcePathArray = normalize(__resourcePath).split("/");
+          const slug = resourcePathArray[resourcePathArray.length - 2];
+          return (
+            <div key={slug}>
+              <BlogListItem
+                title={title}
+                description={description}
+                date={date}
+                readingTime={readingTime.text}
+                tags={tags}
+                slug={slug}
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
   return (
