@@ -10,6 +10,7 @@ import {
   FacebookIcon,
   LinkedinIcon,
 } from "react-share";
+import normalize from "normalize-path";
 
 import Utterances from "../components/Utterances";
 import NewsLetterForm from "../components/NewsLetterForm";
@@ -43,7 +44,7 @@ export default function Layout(frontMatter) {
     taglineTopOffset: 420,
   });
 
-  const resourcePathArray = frontMatter.__resourcePath.split("/");
+  const resourcePathArray = normalize(frontMatter.__resourcePath).split("/");
   const slug = resourcePathArray[resourcePathArray.length - 2];
   const url = `https://soumya.dev/${slug}`;
 
