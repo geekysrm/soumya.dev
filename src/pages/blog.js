@@ -1,14 +1,19 @@
 // Add new /blog here
 import Link from "next/link";
 import normalize from "normalize-path";
+import sortBy from "lodash.sortby";
 import BlogListItem from "../components/BlogListItem";
-import { frontMatter as blogPosts } from "./**/index.mdx";
+import { frontMatter as originalBlogPosts } from "./**/index.mdx";
 
 // Add meta stuff here
 //TODO: Add search blog posts(algolia docsearch?)
 //TODO: Search post by tags
 
 export default function Blog() {
+  const originalBlogPostsWithDate = originalBlogPosts.map((blogPost) => {
+    return { ...blogPost, date: new Date(blogPost.date) };
+  });
+  const blogPosts = sortBy(originalBlogPostsWithDate, "date").reverse();
   return (
     <div>
       <h1 className="text-3xl font-bold leading-snug md:text-4xl">Blog</h1>
