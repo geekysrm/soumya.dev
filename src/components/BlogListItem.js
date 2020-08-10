@@ -15,26 +15,26 @@ function BlogListItem({ title, description, date, readingTime, slug, tags }) {
   const tagsInfoArray = getTagsInfo(tagsArray);
 
   return (
-    <div className="mb-3 bg-gray-300">
-      <div>
-        <h3 className="text-2xl font-semibold">{title}</h3>
-        <div className="flex space-x-2">
-          {tagsInfoArray.map((tag) => (
-            <span
-              key={tag.name}
-              className={`px-2 rounded ${tag.bgColor} ${tag.fontColor}`}
-            >
-              #{tag.name}
-            </span>
-          ))}
+    <Link href={`/${slug}`}>
+      <a>
+        <div className="px-4 py-4 mb-3 font-normal bg-gray-300">
+          <div className="flex justify-between">
+            <h3 className="text-2xl font-semibold">{title}</h3>
+            <div className="flex items-center space-x-2">
+              {tagsInfoArray.map((tag) => (
+                <p
+                  key={tag.name}
+                  className={`px-2 rounded ${tag.bgColor} ${tag.fontColor}`}
+                >
+                  #{tag.name}
+                </p>
+              ))}
+            </div>
+          </div>
+          <p className="text-gray-700">{description}</p>
         </div>
-      </div>
-      <p>{description}</p>
-      {/* Go read{" "}
-      <Link href={`/${slug}`}>
-        <a>here</a>
-      </Link> */}
-    </div>
+      </a>
+    </Link>
   );
 }
 

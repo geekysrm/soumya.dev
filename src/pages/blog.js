@@ -4,6 +4,7 @@ import normalize from "normalize-path";
 import BlogListItem from "../components/BlogListItem";
 import { frontMatter as blogPosts } from "./**/index.mdx";
 
+// Add meta stuff here
 //TODO: Add search blog posts(algolia docsearch?)
 //TODO: Search post by tags
 
@@ -14,8 +15,8 @@ export default function Blog() {
       <h2 className="text-lg text-gray-600">
         Articles, tutorials, snippets, reflections, and everything else.
       </h2>
-      {/* Searcg blog text box and tags go here */}
-      <div className="mt-2">
+      {/* Search blog text box and tags? go here */}
+      <div className="mt-8">
         {blogPosts.map((blogPost) => {
           const {
             title,

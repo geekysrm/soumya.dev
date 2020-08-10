@@ -19,6 +19,26 @@ const tags = [
     bgColor: "bg-blue-300",
     fontColor: "text-gray-800",
   },
+  {
+    name: "react",
+    bgColor: "bg-blue-300",
+    fontColor: "text-gray-800",
+  },
+  {
+    name: "gatsby",
+    bgColor: "bg-blue-300",
+    fontColor: "text-gray-800",
+  },
+  {
+    name: "tailwindcss",
+    bgColor: "bg-blue-300",
+    fontColor: "text-gray-800",
+  },
+  {
+    name: "css",
+    bgColor: "bg-blue-300",
+    fontColor: "text-gray-800",
+  },
 ];
 
 export default tags;

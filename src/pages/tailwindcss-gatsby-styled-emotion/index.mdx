@@ -1,0 +1,176 @@
+---
+title: "Use TailwindCSS with Gatsby (with Emotion or styled-components)"
+description: Learn how to use TailwindCSS with Gatsby along with Emotion or styled-components perfectly.
+date: "2020-02-05"
+tags: "gatsby, tailwindcss, css"
+---
+
+![Use TailwindCSS with Gatsby (with Emotion or styled-components)](/static/images/posts/tailwindcss-gatsby-styled-emotion/banner.jpg "Use TailwindCSS with Gatsby (with Emotion or styled-components)")
+
+I was amazed by the stuff one can do using [Tailwindcss](https://tailwindcss.com). I watched in awe the [live streams](https://www.youtube.com/playlist?list=PL7CcGwsqRpSMgVc5NxXUpqmGOS9s1YrWF) of [Adam Wathan](https://twitter.com/adamwathan) (creator of tailwindcss) where he used to build various layouts using tailwindcss, without using any custom CSS.
+
+Not being a great designer by myself, I decided to give TailwindCSS a try. Being a React developer, I wanted to try tailwind with React.
+
+Then, I was starting with a [Gatsby ](https://gatsbyjs.org)site, I thought why not use tailwind with this. I also wanted to use it with a CSS-in -JS solution like [Emotion ](https://emotion.sh)or [styled-components](https://styled-components.com) being a big fan of CSS-in-JS. I googled a lot, tried different starters and here I am with what I can tell the **_“best _**👌**_”_ way to use TailwindCSS with Gatsby along with CSS-in-JS solutions like Emotion or styled-components.**
+
+## Steps to get the perfect 👌combo:
+
+- Run the following command on your terminal to get a default Gatsby site up and running.
+
+```shell
+npx gatsby new your-gatsby-site
+```
+
+- Run `gatsby develop` on your terminal to open your site on **port 8000 **(default).
+  You can view your site with live reload (updates site as you edit and save code).
+
+- Install Tailwind and generate [Tailwind config file](https://tailwindcss.com/docs/configuration/#creating-your-configuration-file).
+  ( To learn more about how to use Tailwind in your CSS, visit the [Tailwind Documentation](https://tailwindcss.com/docs/installation#3-use-tailwind-in-your-css))
+
+```shell
+# Install Tailwind:
+npm install tailwindcss --save-dev
+
+# Generate Tailwind config:
+npx tailwind init
+```
+
+Now you can use tailwind classes in your project using `className` attribute. But to use CSS-in-JS magic and styled components pattern, follow the below steps.
+
+- Now install _Emotion packages, tailwind-micro, gatsby-plugin-postcss, postcss-preset-env, postcss-import, [stylelint](https://stylelint.io/)_:
+
+```shell
+npm i @emotion/core @emotion/styled tailwind.macro@next gatsby-plugin-postcss postcss-import postcss-preset-env
+# We are installing the 'next' version of tailwind micro so as to use TailwindCSS 1.0.0+
+# For older versions of TailwindCSS, just install 'tailwind.macro'
+```
+
+- Create a file `postcss.config.js` in the root of your project with the following content:
+
+```javascript
+module.exports = {
+  plugins: [
+    require("postcss-import")({
+      plugins: [require("stylelint")],
+    }),
+    require("tailwindcss")("./tailwind.config.js"),
+    require("postcss-preset-env")({
+      autoprefixer: { grid: true },
+      features: {
+        "nesting-rules": true,
+      },
+      browsers: ["> 1%", "last 2 versions", "Firefox ESR"],
+    }),
+  ],
+};
+```
+
+- Add `gatsby-plugin-postcss` and `gatsby-plugin-emotion` to your `gatsby-config.js` file:
+
+```javascript
+plugins: [
+  ...
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        // Accepts all options defined by `gatsby-plugin-postcss` plugin.
+      },
+    },
+   {
+      resolve: `gatsby-plugin-emotion`,
+      options: {
+        // Accepts all options defined by `babel-plugin-emotion` plugin.
+      },
+    },
+    ...
+  ],
+```
+
+- Restart Gatsby dev server using `Ctrl+C` and again running `gatsby develop` .
+  Now our gatsby site knows about the plugins we have installed.
+
+- To use default Tailwind base styles and utilities styles, create a globals.css file. I like to keep it in `src/styles/globals.css` :
+
+```css
+@tailwind base;
+@tailwind utilities;
+```
+
+- Now to use the `globals.css` styles, we import it in the `gatsby-browser.js` file in our root directory:
+
+```javascript
+// Edit the path to where you have kept the globals.css file
+import "./src/styles/globals.css";
+```
+
+- Restart Gatsby dev server using `Ctrl+C` and again running `gatsby develop` .
+
+## Usage 💻
+
+Finally, we are done with all installation and configuration. Whew!
+We can now use the tailwind classes quite easily in our components in 3 ways:
+
+_a._ _Using tailwind classes directly in markup:_
+
+```jsx
+import React from "react";
+import tw from "tailwind.macro";
+
+const MyComponent = (
+  <h4 css={tw`font-semibold text-lg leading-snug truncate`}>This is Soumya</h4>
+);
+
+export default MyComponent;
+```
+
+Here, the tailwind classes `font-semibold`, `text-lg`, `leading-snug`, `truncate` will be applied to `h4` tag.
+
+_b. Using styled components pattern:_
+
+```jsx
+import React from "react";
+import tw from "tailwind.macro";
+
+const MyComponent = tw.div`
+  bg-white
+  rounded-lg
+  overflow-hidden
+  border
+`;
+
+export default MyComponent;
+```
+
+_c. In case you want to apply custom CSS along with some TailwindCSS properties:_
+
+```jsx
+import React from "react";
+import tw from "tailwind.macro";
+import styled from "@emotion/styled";
+
+const MyComponent = styled.div`
+  ${tw`bg-white
+  rounded-lg
+  overflow-hidden
+  border`}
+  height: 409px;
+  img {
+    height: 265px;
+    object-fit: cover;
+    object-position: center;
+  }
+`;
+
+export default MyComponent;
+```
+
+Tip: To quickly refer Tailwind classes, use [TailwindCSS cheatsheet](https://nerdcave.com/tailwind-cheat-sheet) 📝.
+
+That’s it! Congratulations! 🎉
+You have successfully setup a Gatsby site that uses TailwindCSS along with Emotion.
+
+Suggestions and comments are welcome!
+
+## Happy Coding! 👨‍💻
+
+_If this post helped you, and you want to help me create more tutorials/ videos like this, please consider supporting me at [https://coffee.soumya.dev/](https://coffee.soumya.dev/)_
