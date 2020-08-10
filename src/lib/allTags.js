@@ -16,7 +16,7 @@ const tags = [
   },
   {
     name: "tools",
-    bgColor: "bg-blue-300",
+    bgColor: "bg-yellow-300",
     fontColor: "text-gray-800",
   },
   {
@@ -26,18 +26,18 @@ const tags = [
   },
   {
     name: "gatsby",
-    bgColor: "bg-blue-300",
-    fontColor: "text-gray-800",
+    bgColor: "bg-blue-600",
+    fontColor: "text-gray-200",
   },
   {
     name: "tailwindcss",
-    bgColor: "bg-blue-300",
+    bgColor: "bg-teal-400",
     fontColor: "text-gray-800",
   },
   {
     name: "css",
-    bgColor: "bg-blue-300",
-    fontColor: "text-gray-800",
+    bgColor: "bg-purple-600",
+    fontColor: "text-gray-200",
   },
 ];
 
