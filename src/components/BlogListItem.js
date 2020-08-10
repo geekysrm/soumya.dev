@@ -18,9 +18,11 @@ function BlogListItem({ title, description, date, readingTime, slug, tags }) {
     <Link href={`/${slug}`}>
       <a>
         <div className="px-4 py-4 mb-3 font-normal bg-gray-300">
-          <div className="flex justify-between">
-            <h3 className="text-2xl font-semibold">{title}</h3>
-            <div className="flex items-center space-x-2">
+          <div className="flex flex-col justify-between md:flex-row">
+            <h3 className="mb-2 text-2xl font-semibold leading-snug">
+              {title}
+            </h3>
+            <div className="flex items-center mb-2 space-x-2">
               {tagsInfoArray.map((tag) => (
                 <p
                   key={tag.name}
