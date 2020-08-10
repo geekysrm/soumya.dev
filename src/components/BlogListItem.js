@@ -1,4 +1,5 @@
 import Link from "next/link";
+import getTagsInfo from "../lib/getTagsInfo";
 
 function BlogListItem({ title, description, date, readingTime, slug, tags }) {
   // TODO: add Meta Tags to this page and all other non-post pages
@@ -9,13 +10,30 @@ function BlogListItem({ title, description, date, readingTime, slug, tags }) {
   // slug: "hello-world"
   // tags: "next.js, javascript"
   // title: "Hello World"
+
+  const tagsArray = tags.split(",").map((tag) => `${tag.trim()}`);
+  const tagsInfoArray = getTagsInfo(tagsArray);
+
   return (
-    <div>
-      Title: {title}
-      Go read{" "}
+    <div className="mb-3 bg-gray-300">
+      <div>
+        <h3 className="text-2xl font-semibold">{title}</h3>
+        <div className="flex space-x-2">
+          {tagsInfoArray.map((tag) => (
+            <span
+              key={tag.name}
+              className={`px-2 rounded ${tag.bgColor} ${tag.fontColor}`}
+            >
+              #{tag.name}
+            </span>
+          ))}
+        </div>
+      </div>
+      <p>{description}</p>
+      {/* Go read{" "}
       <Link href={`/${slug}`}>
         <a>here</a>
-      </Link>
+      </Link> */}
     </div>
   );
 }

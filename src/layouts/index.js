@@ -19,6 +19,7 @@ import IconEdit from "../components/SVGIcons/IconEdit";
 import MetaTags from "../components/MetaTags";
 import AuthorCard from "../components/AuthorCard";
 
+// show tags
 // show nProgressbar, (views?)
 // more SEO stuff to be added if needed
 
