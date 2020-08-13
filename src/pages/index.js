@@ -36,9 +36,9 @@ export default function Home() {
       </Head>
       <div>
         <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-          <a className="navbar-brand" href="#">
-            geekySRM
-          </a>
+          <Link href="/">
+            <a className="navbar-brand">geekySRM</a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -53,19 +53,17 @@ export default function Home() {
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <ul className="ml-auto navbar-nav">
               <li className="nav-item active">
-                <a className="nav-link" href="#">
-                  Home
-                  <span className="sr-only">(current)</span>
-                </a>
+                <Link href="/">
+                  <a className="nav-link">
+                    Home
+                    <span className="sr-only">(current)</span>
+                  </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a
-                  className="nav-link"
-                  href="https://geekysrm.github.io/blog"
-                  target="_blank"
-                >
-                  My Blog
-                </a>
+                <Link href="/blog">
+                  <a className="nav-link">Blog</a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#whoiam">
@@ -93,11 +91,13 @@ export default function Home() {
         <div className="announcement">
           💡Note: This site is under construction 🚧. I'm in the middle of
           building a new version using <b>React and Next.js</b>. Please excuse
-          my mess!<br />
-          👀 Sneak peek <Link href="/switch-to-firefox-from-chrome">
+          my mess!
+          <br />
+          👀 Sneak peek{" "}
+          <Link href="/switch-to-firefox-from-chrome">
             <a className="hover:text-gray-400 announcement-link">here!</a>
           </Link>
-          </div>
+        </div>
         <br />
         <br />
         <div className="pimg1">
