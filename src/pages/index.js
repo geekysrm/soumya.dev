@@ -94,7 +94,7 @@ export default function Home() {
           my mess!
           <br />
           👀 Sneak peek{" "}
-          <Link href="/switch-to-firefox-from-chrome">
+          <Link href="/tailwindcss-gatsby-styled-emotion">
             <a className="hover:text-gray-400 announcement-link">here!</a>
           </Link>
         </div>
