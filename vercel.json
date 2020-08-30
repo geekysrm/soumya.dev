@@ -1,0 +1,9 @@
+{
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/notes",
+      "destination": "https://notes.soumya.dev"
+    }
+  ]
+}
