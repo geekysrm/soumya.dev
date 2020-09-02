@@ -114,7 +114,7 @@ export default function Home() {
             <br />
             <div>
               <span className="subtitle">
-                A blockchain enthusiast &amp; web developer
+                A fullstack software developer and a Google Mobile & Web Specialist
               </span>
             </div>
             <br />
@@ -164,7 +164,7 @@ export default function Home() {
             Certified Mobile Web Specialist, Google India Scholar, a full-stack
             web developer and entrepreneur. I completed my BTech. in Computer
             Science Engineering at{" "}
-            <a href="https://www.iiit-bh.ac.in" target="_blank">
+            <a href="https://www.iiit-bh.ac.in" target="_blank" rel="noopener noreferrer">
               IIIT Bhubaneswar
             </a>{" "}
             .
@@ -172,7 +172,7 @@ export default function Home() {
             I love coding and participating in hackathons. I have knowledge of
             various web technologies and have build many projects.
             <br />I love writing and I maintain a{" "}
-            <a href="https://geekysrm.github.io/blog" target="_blank">
+            <a href="https://soumya.dev/blog" target="_blank">
               blog
             </a>{" "}
             where I write about tech.
