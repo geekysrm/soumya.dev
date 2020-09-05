@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Router, { useRouter } from "next/router";
 import Head from "next/head";
-import Header from "../components/Header"
+import Header from "../components/Header";
 import SectionContainer from "../components/SectionContainer";
 import * as gtag from "../lib/gtag";
 import "../styles/tailwind.css";
