@@ -36,6 +36,13 @@ export default function Layout(frontMatter) {
             twitterHandle="@geekysrm"
           />
         </Head>
+        <h1 className="text-3xl font-bold leading-snug md:text-4xl">
+          My Setup
+        </h1>
+        <h2 className="mt-2 text-lg text-gray-600">
+          I ocassionally get messages asking about tools, software or hardware I
+          use. This page will remain as an up-to-date list of my setup.
+        </h2>
         <div className="mt-5 prose-lg">{content}</div>
       </>
     );
