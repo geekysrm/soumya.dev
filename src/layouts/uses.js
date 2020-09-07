@@ -36,7 +36,7 @@ export default function Layout(frontMatter) {
             twitterHandle="@geekysrm"
           />
         </Head>
-        <div className="mt-5 prose lg:prose-lg">{content}</div>
+        <div className="mt-5 prose-lg">{content}</div>
       </>
     );
   };
