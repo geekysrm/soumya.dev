@@ -1,0 +1,270 @@
+---
+title: "What is Tailwind CSS and why you should use it"
+description: Learn about the utility-fist CSS framework, Tailwind CSS and how to use it.
+date: "2020-10-19"
+tags: "tailwindcss, css"
+---
+
+<!-- ![Use TailwindCSS with Gatsby (with Emotion or styled-components)](/static/images/posts/tailwindcss-gatsby-styled-emotion/banner.jpg "Use TailwindCSS with Gatsby (with Emotion or styled-components)") -->
+
+Tailwind CSS is a utility-first CSS framework which means it has various utility classes which help to create layouts and rapidly create custom designs.
+
+I have always loved Adam([Tailwind CSS](https://tailwindcss.com/) creator)'s [streams](https://www.youtube.com/playlist?list=PL7CcGwsqRpSMgVc5NxXUpqmGOS9s1YrWF) where he creates awesome-looking, well-designed layouts using Tailwind CSS. Now I cannot imagine a future project without using Tailwind CSS.
+
+This very page and my [blog](https://soumya.dev/blog) is also built using Tailwind CSS. 😉
+
+## How is it different from Bootstrap or Bulma etc.? 🤔
+
+Most UI frameworks like Bootstrap, Material UI, Bulma etc. have pre-designed UI components like cards, buttons, navbars, alerts. You use those components and create designs on top of those components.
+
+But in Tailwind CSS, you don't get a pre-designed set of components. You get utility-classes. You can combine those to create your layout and components.
+
+## How is this advantageous over other frameworks?
+
+1.  If you use other frameworks, say Bootstrap, your site feels Bootstrap-y. It means one can easily tell it is built using Bootstrap (which of course is not a problem) but it looks very similar to thousand other sites built using the same framework. This is **not a problem** with Tailwind CSS because it doesn't give you pre-defined components to use. You can use tailwind utility-classes in any combination to create your own UI components. See below how to do so.
+2.  To overcome the above problem, you have one solution: **override styles.** If you have ever done this before, you know that this gets out of hand pretty fast. This is not a problem with Tailwind CSS.
+3.  You solve one of the [2 hardest things](https://martinfowler.com/bliki/TwoHardThings.html) of computer science: naming things, here making up **class names**. As iterated earlier, Tailwind CSS gives you utility classes which you can use to create your styles without worrying about class names invention.
+4.  **Responsive by design:** If you use Tailwind CSS, you don't need to write custom styles for handling responsiveness for different screen sizes. You can use Tailwind's responsive utilities to handle it easily. We will see that below.
+5.  **Pseudo classes:** We can style elements on hover, focus etc. similar to how we do responsive design in Tailwind CSS.
+
+6.  **And a lot more!** - New features are always getting added like Dark mode support, animations etc.
+
+## Getting Started with Tailwind CSS
+
+The easiest way to get started with Tailwind CSS is to grab the CDN and start playing with it. For serious projects, I recommend installing it via npm which I have described just below the CDN method.
+
+### Using the CDN:
+
+Add the CDN to your HTML:
+
+```html
+<link
+  href="<https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css>"
+  rel="stylesheet"
+/>
+```
+
+### Installing it via npm:
+
+1.  In order to use it, you have to first install Tailwind CSS via npm.
+
+    ```
+    npm install tailwindcss -D
+    # -D installs it as a dev dependency
+    ```
+
+2.  Create a tailwind config file: This file is used to configure and customize tailwind to your liking.
+
+    ```bash
+    npx tailwindcss init
+    ```
+
+    This creates `tailwind.config.js` in the root of your project.
+
+    ```javascript
+    // tailwind.config.js
+    module.exports = {
+      future: {},
+      purge: [],
+      theme: {
+        extend: {},
+      },
+      variants: {},
+      plugins: [],
+    };
+    ```
+
+3.  Add Tailwind CSS to your CSS: Create a CSS file with the following contents and import it.
+
+    ```css
+    @tailwind base;
+
+    @tailwind components;
+
+    @tailwind utilities;
+    ```
+
+4.  Using Tailwind with PostCSS: Tailwind CSS is a PostCSS plugin meaning you have to create a `postcss.config.js` file in the root of your project:
+
+    ```javascript
+    module.exports = {
+      plugins: [
+        // ...
+        require("tailwindcss"),
+        require("autoprefixer"),
+        // ...
+      ],
+    };
+    ```
+
+    In production, to decrease the CSS bundle size, it is recommended to use purge the unused CSS. You can find more information [here](https://tailwindcss.com/docs/controlling-file-size#purge-css-options).
+
+    ## Using Tailwind CSS
+
+    As mentioned earlier, Tailwind CSS provided us with utility classes.
+
+    For example, to give an element `display: flex` property, we just have to add the `flex` class to the element. Easy, right?
+
+    Similarly, there are many classes for various colors, flexbox, CSS Grid, spacing, typography, border styles, transitions etc.
+
+    I have depicted some of the utility-classes provided to us by Tailwind CSS below:
+
+    **Colors:** We can use hand-picked colors like red, blue, yellow and others with different shaded from 100-900 which are specified in the [default color pallete](https://tailwindcss.com/docs/customizing-colors#default-color-palette). We can also add or remove colors from the pallete by modifying the `taiwind.config.js` file.
+
+    ```javascript
+    // tailwind.config.js
+    module.exports = {
+      theme: {
+        colors: {
+          indigo: '#5c6ac4',
+          blue: '#007ace',
+          red: '#de3618',
+        }
+      }
+
+    ```
+
+    **Margin and padding:** To use margin, we use `mx-1` , `my-3` , `m-4` to apply margin to the left-right, up-down and all around respectively. The numbers 1, 3 and 4 follow the [default spacing scale](https://tailwindcss.com/docs/customizing-spacing#default-spacing-scale) that Tailwind follows.
+
+    **Responsivenes:** We can easily add responsiveness to our website. Suppose we want a paragraph to have font bold on small screens and font semibold on large screens and above, we can do that very easily by the following HTML:
+
+    ```html
+    <p class="font-bold lg:font-semibold">
+      Hello, I am a paragaph styled using Tailwind CSS.
+    </p>
+    ```
+
+    Tip: To debug responsive styles in all screen-sizes very easily, I use [Sizzy browser](https://link.soumya.dev/sizzy).
+
+    **Display:** These are used to control the `display` property of an element. For example, to make an item `display:block` , we give the element a class `block` . In the same way, we use classes `flex`, `grid`, `table` etc. to give respective styles to the element.
+
+    There are a lot many different utility classes which I have not covered, but you can find those in the [documentation](https://tailwindcss.com/docs/).
+
+    Let's learn more about Tailwind CSS by looking at some examples:
+
+    ### Examples:
+
+    1.  **HTML:**
+
+    ```html
+    <button class="px-4 py-2 font-semibold bg-blue-400 rounded">
+      Click Me
+    </button>
+    ```
+
+    becomes:
+
+    [CodePen Embed - Tailwind CSS Example 1](https://codepen.io/geekysrm/embed/XWKKNKd?default-tab=result&theme-id=dark)
+
+    **Explanation:**
+
+    `px-4` and `py-2` give padding on the horizontal and vertical axes respectively.
+
+    `font-semibold` applies a font-weight of 600 to the button text.
+
+    `bg-blue-400` gives it a blue color with shade 400 from the tailwind [pallete](https://tailwindcss.com/docs/customizing-colors#default-color-palette).
+
+    Finally, `rounded` gives the button `border-radius: 0.25rem;` .
+
+    2.  **HTML** (this example is taken from the docs itself):
+
+    ```html
+    <div class="md:flex">
+      <div class="md:flex-shrink-0">
+        <img
+          class="rounded-lg md:w-56"
+          src="<https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=448&q=80>"
+          alt="Woman paying for a purchase"
+        />
+      </div>
+      <div class="mt-4 md:mt-0 md:ml-6">
+        <div class="text-sm font-bold tracking-wide text-indigo-600 uppercase">
+          Marketing
+        </div>
+        <a
+          href="#"
+          class="block mt-1 text-lg font-semibold leading-tight text-gray-900 hover:underline"
+          >Finding customers for your new business</a
+        >
+        <p class="mt-2 text-gray-600">
+          Getting a new business off the ground is a lot of hard work. Here are
+          five ideas you can use to find your first customers.
+        </p>
+      </div>
+    </div>
+    ```
+
+    becomes:
+
+    [CodePen Embed - Tailwind CSS Example 2](https://codepen.io/geekysrm/embed/ExyyNgg?default-tab=result&theme-id=dark)
+
+    3.  **HTML** (blog post listing on my blog):
+
+    ```html
+    <div class="px-4 py-4 mb-3 font-normal bg-gray-300">
+      <div class="flex flex-col justify-between md:flex-row">
+        <h3 class="mb-2 text-2xl font-semibold leading-snug">
+          Use TailwindCSS with Gatsby (with Emotion or styled-components)
+        </h3>
+        <div class="flex items-center mb-2 space-x-2">
+          <p class="px-2 text-gray-200 bg-blue-600 rounded">#gatsby</p>
+          <p class="px-2 text-gray-800 bg-teal-400 rounded">#tailwindcss</p>
+          <p class="px-2 text-gray-200 bg-purple-600 rounded">#css</p>
+        </div>
+      </div>
+      <p class="text-gray-700">
+        Learn how to use TailwindCSS with Gatsby along with Emotion or
+        styled-components perfectly.
+      </p>
+    </div>
+    ```
+
+    becomes:
+
+    [CodePen Embed - YzWWpNe](https://codepen.io/geekysrm/embed/YzWWpNe?default-tab=result&theme-id=dark)
+
+    **Tip:** To quickly refer Tailwind classes at a glance, use [TailwindCSS cheatsheet](https://nerdcave.com/tailwind-cheat-sheet) 📝.
+
+    ## Using Tailwind CSS with React:
+
+    It can be quite painful to repeat the same utility classes for reusable components in your site. To solve this issue, you can extract out the common styles into a React component (or a component in your frontend framework of choice), make it dynamic using props and re-use it.
+
+    **Example:**
+
+    _Usage:_
+
+    ```jsx
+    <Card
+      imgSrc="<https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80>"
+      imgAlt="Hotel California"
+      title="Welcome to Hotel California"
+      pricing="$259 USD/ night"
+      url="/hotel/california-hotel"
+    />
+    ```
+
+    _Card Component:_
+
+    ```jsx
+    function Welcome({imgSrc, imgAlt, title, pricing, url}) {
+      return (
+    		<div><img class="rounded" src={imgSrc} alt={imgAlt}>
+    		  <div class="mt-2">
+    		    <div>
+    		      <div class="font-bold leading-snug text-gray-700"><a href={url} class="hover:underline">{title}</a></div>
+    		      <div class="mt-2 text-sm text-gray-600">{pricing}</div>
+    		    </div>
+    		  </div>
+    		</div>
+    	);
+    }
+
+    ```
+
+    In case you want to use Tailwind CSS with CSS-in-JS libraries like Emotion or styled-components, you can follow my [guide](https://soumya.dev/tailwindcss-gatsby-styled-emotion).
+
+    I hope these examples made you understand the various properties of Tailwind CSS and how it is different from traditional CSS frameworks like Bootstrap and others. I am sure you will love Tailwind CSS once you start using it in your projects, just like I did.
+
+    ## Happy Coding! 👨‍💻
+
+    _If this post helped you, and you want to help me create more tutorials/ videos like this, please consider supporting me at [](https://coffee.soumya.dev/)[https://coffee.soumya.dev/](https://coffee.soumya.dev/)_
