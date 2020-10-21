@@ -301,15 +301,15 @@ _Card Component:_
 function Welcome({ imgSrc, imgAlt, title, pricing, url }) {
   return (
     <div>
-      <img class="rounded" src={imgSrc} alt={imgAlt} />
-      <div class="mt-2">
+      <img className="rounded" src={imgSrc} alt={imgAlt} />
+      <div className="mt-2">
         <div>
-          <div class="font-bold leading-snug text-gray-700">
-            <a href={url} class="hover:underline">
+          <div className="font-bold leading-snug text-gray-700">
+            <a href={url} className="hover:underline">
               {title}
             </a>
           </div>
-          <div class="mt-2 text-sm text-gray-600">{pricing}</div>
+          <div className="mt-2 text-sm text-gray-600">{pricing}</div>
         </div>
       </div>
     </div>
