@@ -4,6 +4,10 @@
     {
       "source": "/notes",
       "destination": "https://notes.soumya.dev"
+    },
+    {
+      "source": "/newsletter",
+      "destination": "https://tinyletter.com/geekysrm"
     }
   ]
 }
