@@ -1,4 +1,4 @@
-import Document, { Head, Main, NextScript } from "next/document";
+import Document, { Head, Main, NextScript,Html } from "next/document";
 import GoogleFonts from "next-google-fonts";
 
 import { GA_TRACKING_ID } from "../lib/gtag";
@@ -6,7 +6,7 @@ import { GA_TRACKING_ID } from "../lib/gtag";
 export default class MyDocument extends Document {
   render() {
     return (
-      <html lang="en">
+      <Html lang="en">
         <Head>
           <GoogleFonts href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
@@ -32,7 +32,7 @@ export default class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }
