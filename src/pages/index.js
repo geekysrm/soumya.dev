@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="homepage">
       <Head>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Soumya Ranjan Mohanty</title>
@@ -114,7 +114,8 @@ export default function Home() {
             <br />
             <div>
               <span className="subtitle">
-                A fullstack software developer and a Google Mobile & Web Specialist
+                A fullstack software developer and a Google Mobile & Web
+                Specialist
               </span>
             </div>
             <br />
@@ -164,7 +165,11 @@ export default function Home() {
             Certified Mobile Web Specialist, Google India Scholar, a full-stack
             web developer and entrepreneur. I completed my BTech. in Computer
             Science Engineering at{" "}
-            <a href="https://www.iiit-bh.ac.in" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.iiit-bh.ac.in"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               IIIT Bhubaneswar
             </a>{" "}
             .

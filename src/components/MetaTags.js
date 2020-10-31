@@ -1,3 +1,4 @@
+// Not being used anywhere. Using next-seo instead
 export default function MetaTags({
   title,
   author,
@@ -22,8 +23,8 @@ export default function MetaTags({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:url" content={url} />
       <meta name="twitter:image" content={image} />
-      <meta name="twitter:site" content="twitterHandle" />
-      <meta name="twitter:creator" content="twitterHandle" />
+      <meta name="twitter:site" content={twitterHandle} />
+      <meta name="twitter:creator" content={twitterHandle} />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </>
   );

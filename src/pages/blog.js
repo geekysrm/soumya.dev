@@ -1,9 +1,9 @@
 // Add new /blog here
 import Link from "next/link";
-import Head from "next/head";
 import normalize from "normalize-path";
 import sortBy from "lodash.sortby";
-import MetaTags from "../components/MetaTags";
+import { NextSeo } from "next-seo";
+
 import BlogListItem from "../components/BlogListItem";
 import { frontMatter as originalBlogPosts } from "./**/index.mdx";
 
@@ -17,18 +17,34 @@ export default function Blog() {
   const blogPosts = sortBy(originalBlogPostsWithDate, "date").reverse();
   return (
     <>
-      <Head>
-        <title>Soumya's Blog - Soumya Ranjan Mohanty</title>
-        <MetaTags
-          title="Soumya's Blog - Soumya Ranjan Mohanty"
-          author="Soumya Ranjan Mohanty (geekySRM)"
-          description="Soumya's blog with tech articles revolving around web devlopment and software development."
-          type="article"
-          url="https://soumya.dev/blog"
-          image="https://res.cloudinary.com/geekysrm/image/upload/v1597093279/blog-og-image.png"
-          twitterHandle="@geekysrm"
-        />
-      </Head>
+      <NextSeo
+        title="Soumya's Blog - Soumya Ranjan Mohanty"
+        description="Soumya's blog with tech articles revolving around web development and software development."
+        openGraph={{
+          title: "Soumya's Blog - Soumya Ranjan Mohanty",
+          description:
+            "Soumya's blog with tech articles revolving around web development and software development.",
+          images: [
+            {
+              url:
+                "https://res.cloudinary.com/geekysrm/image/upload/v1597093279/blog-og-image.png",
+              width: 1280,
+              height: 720,
+              alt: "Soumya's Blog",
+            },
+          ],
+          type: "article",
+          article: {
+            authors: ["https://soumya.dev"],
+          },
+          url: "https://soumya.dev/blog",
+          twitter: {
+            cardType: "summary_large_image",
+            site: "@geekysrm",
+            creator: "@geekysrm",
+          },
+        }}
+      />
       <div>
         <h1 className="text-3xl font-bold leading-snug md:text-4xl">Blog</h1>
         <h2 className="text-lg text-gray-600">
