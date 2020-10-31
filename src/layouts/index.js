@@ -50,7 +50,6 @@ export default function Layout({ frontMatter, children: content }) {
 
   const title = `${frontMatter.title} - Soumya's blog`;
 
-  // return ({ children: content }) => {
   return (
     <>
       <NextSeo
@@ -134,5 +133,4 @@ export default function Layout({ frontMatter, children: content }) {
       <Utterances repo="geekysrm/soumya.dev" theme="github-light" />
     </>
   );
-  // };
 }

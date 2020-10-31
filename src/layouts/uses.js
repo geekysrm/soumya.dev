@@ -19,7 +19,6 @@ export default function Layout({ frontMatter, children: content }) {
     taglineTopOffset: 420,
   });
 
-  // return ({ children: content }) => {
   return (
     <>
       <NextSeo
@@ -56,5 +55,4 @@ export default function Layout({ frontMatter, children: content }) {
       <div className="mt-5 prose-lg">{content}</div>
     </>
   );
-  // };
 }
