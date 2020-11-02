@@ -11,6 +11,8 @@ import {
 } from "react-share";
 import normalize from "normalize-path";
 import { NextSeo } from "next-seo";
+import { MDXProvider } from "@mdx-js/react";
+import Image from "next/image";
 
 import Utterances from "../components/Utterances";
 import NewsLetterForm from "../components/NewsLetterForm";
@@ -21,6 +23,10 @@ import AuthorCard from "../components/AuthorCard";
 // show tags of post
 // show nProgressbar, (views?)
 // more SEO stuff to be added if needed
+
+const components = {
+  img: Image,
+};
 
 export default function Layout({ frontMatter, children: content }) {
   const tags = frontMatter.tags
@@ -93,7 +99,9 @@ export default function Layout({ frontMatter, children: content }) {
             </div>
           </div>
           {/* Add more responsive styles to {content} below */}
-          <div className="mt-5 prose lg:prose-lg">{content}</div>
+          <div className="mt-5 prose lg:prose-lg">
+            <MDXProvider components={components}>{content}</MDXProvider>
+          </div>
         </div>
         <AuthorCard />
       </article>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function AuthorCard() {
   return (
@@ -6,10 +7,11 @@ export default function AuthorCard() {
       <h3 className="text-xl font-semibold">Author</h3>
       <div>
         <div>
-          <img
+          <Image
             className="w-24 mt-3 rounded-full"
             alt="Soumya Ranjan Mohanty (geekySRM)"
             src="/static/images/soumya.jpg"
+            unsized
           />
         </div>
         <p className="mt-3">
@@ -44,10 +46,11 @@ export default function AuthorCard() {
                 <NewsLetterForm />
               </div> */}
         <div className="flex items-center mt-3">
-          <img
+          <Image
             className="w-6 ml-2"
             src="/static/images/email.svg"
             alt="Buy me a coffee"
+            unsized
           />
           <a
             className="ml-4"
@@ -59,10 +62,11 @@ export default function AuthorCard() {
           </a>
         </div>
         <div className="flex items-center mt-3">
-          <img
+          <Image
             className="w-10 -mt-2"
             src="/static/images/coffee.svg"
             alt="Buy me a coffee"
+            unsized
           />
           <a
             className="ml-2"
