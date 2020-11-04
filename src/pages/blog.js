@@ -38,11 +38,11 @@ export default function Blog() {
             authors: ["https://soumya.dev"],
           },
           url: "https://soumya.dev/blog",
-          twitter: {
-            cardType: "summary_large_image",
-            site: "@geekysrm",
-            creator: "@geekysrm",
-          },
+        }}
+        twitter={{
+          cardType: "summary_large_image",
+          site: "@geekysrm",
+          creator: "@geekysrm",
         }}
       />
       <div>

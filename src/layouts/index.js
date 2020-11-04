@@ -77,11 +77,11 @@ export default function Layout({ frontMatter, children: content }) {
             authors: ["https://soumya.dev"],
           },
           url: url,
-          twitter: {
-            cardType: "summary_large_image",
-            site: "@geekysrm",
-            creator: "@geekysrm",
-          },
+        }}
+        twitter={{
+          cardType: "summary_large_image",
+          site: "@geekysrm",
+          creator: "@geekysrm",
         }}
       />
       <article className="flex flex-col justify-between md:flex-row">

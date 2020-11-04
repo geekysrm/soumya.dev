@@ -40,11 +40,11 @@ export default function Layout({ frontMatter, children: content }) {
             authors: ["https://soumya.dev"],
           },
           url: "https://soumya.dev/uses",
-          twitter: {
-            cardType: "summary_large_image",
-            site: "@geekysrm",
-            creator: "@geekysrm",
-          },
+        }}
+        twitter={{
+          cardType: "summary_large_image",
+          site: "@geekysrm",
+          creator: "@geekysrm",
         }}
       />
       <h1 className="text-3xl font-bold leading-snug md:text-4xl">My Setup</h1>
