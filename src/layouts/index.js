@@ -80,7 +80,7 @@ export default function Layout({ frontMatter, children: content }) {
           twitter: {
             cardType: "summary_large_image",
             site: "@geekysrm",
-            creator: "@geekysrm",
+            handle: "@geekysrm",
           },
         }}
       />
