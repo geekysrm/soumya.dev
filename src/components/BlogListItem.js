@@ -17,7 +17,7 @@ function BlogListItem({ title, description, date, readingTime, slug, tags }) {
   return (
     <Link href={`/${slug}`}>
       <a>
-        <div className="px-4 py-4 mb-3 font-normal bg-gray-300">
+        <div className="px-4 py-4 mb-3 font-normal bg-gray-200">
           <div className="flex flex-col justify-between md:flex-row">
             <h3 className="mb-2 text-2xl font-semibold leading-snug">
               {title}

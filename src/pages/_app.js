@@ -21,7 +21,7 @@ const MyApp = ({ Component, pageProps }) => {
   }, []);
 
   return (
-    <div className="min-h-screen antialiased bg-gray-200">
+    <div className="min-h-screen antialiased bg-gray-100">
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link
