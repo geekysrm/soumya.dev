@@ -7,7 +7,7 @@ export default function Header() {
     <header className="flex items-center justify-between py-10">
       <div>
         <Link href="/">
-          <a aria-label="Home - soumya.dev">
+          <a aria-label="geekySRM">
             {/* <TailwindMark className="h-6 sm:hidden" />
             <TailwindLogo className="hidden h-6 sm:block" /> */}
             <Logo />

@@ -13,8 +13,8 @@ import {
 
 export default function NewSite() {
   return (
-    <div>
-      <section className="px-4 pt-20">
+    <div className="flex flex-row-reverse">
+      <section className="w-1/2 px-4 pt-20">
         <h1 className="flex text-5xl font-extrabold">
           Hi, I'm Soumya
           <motion.div
@@ -35,10 +35,15 @@ export default function NewSite() {
         </h1>
         <div className="mt-6">
           <p className="text-2xl">
-            A Software Developer from India bringing{" "}
-            <span className="text-red-500">ideas</span> to life.
+            A{" "}
+            <span className="font-semibold text-red-500">
+              Software Developer
+            </span>{" "}
+            and <span className="font-semibold text-red-500">Maker</span> from
+            India bringing <span className="text-red-500">ideas </span> to life
+            with technology.
           </p>
-          <p>
+          <p className="mt-2">
             You can read more <a>about me</a> or have a look at my{" "}
             <a>projects</a>.
           </p>
@@ -49,7 +54,15 @@ export default function NewSite() {
         >
           Say Hello
         </a>
-        <div className="flex mt-5 space-x-5">
+      </section>
+      <section className="w-1/2">
+        <div className="flex justify-center">
+          <img
+            src="https://uploads-ssl.webflow.com/5e5fb69af39fe076e1ccecae/5ea5b46fa5a8d2aaf0ded525_About%20-%20laptop.svg"
+            className="h-80"
+          />
+        </div>
+        <div className="flex justify-center hidden mt-5 space-x-5">
           {/* Socials - add/remove links */}
           <a
             className="cursor-pointer"
