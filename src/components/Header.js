@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import Logo from "./Logo";
+
 export default function Header() {
   return (
     <header className="flex items-center justify-between py-10">
@@ -8,7 +10,7 @@ export default function Header() {
           <a aria-label="Home - soumya.dev">
             {/* <TailwindMark className="h-6 sm:hidden" />
             <TailwindLogo className="hidden h-6 sm:block" /> */}
-            geekySRM
+            <Logo />
           </a>
         </Link>
       </div>

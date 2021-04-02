@@ -45,7 +45,7 @@ export default function NewSite() {
         </div>
         <a
           href="mailto:hey@soumya.dev"
-          className="inline-block px-6 py-2 mt-4 font-bold text-white bg-red-500 border-gray-600"
+          className="inline-block px-5 py-2 mt-4 text-xl font-bold text-white bg-red-500 border-gray-600"
         >
           Say Hello
         </a>
@@ -104,3 +104,5 @@ export default function NewSite() {
     </div>
   );
 }
+
+// #ff3960
