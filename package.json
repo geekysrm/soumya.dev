@@ -12,7 +12,7 @@
   "dependencies": {
     "@jlengstorf/get-share-image": "^0.7.1",
     "@tailwindcss/typography": "^0.1.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "babel-plugin-import-glob-array": "^0.2.0",
     "date-fns": "^2.14.0",
     "framer-motion": "^4.1.2",
