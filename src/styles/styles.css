@@ -13,7 +13,6 @@ body {
 
 /* Change "a" styles below */
 
-a,
 .prose a {
   background: linear-gradient(transparent 70%, #dbe4ff 0);
   text-decoration: none;
