@@ -13,7 +13,7 @@ body {
 
 /* Change "a" styles below */
 a {
-  cursor: pointer;
+  border-bottom: 2px solid #ff3960;
 }
 
 .prose a {
@@ -29,6 +29,7 @@ a:hover {
 a.nav-link,
 a.navbar-brand,
 a.announcement-link {
+  border-bottom: none;
   background: none;
   text-decoration: none;
   font-weight: 700;

@@ -1,5 +1,6 @@
 // New homepage at /
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
   FaProductHunt,
   FaTwitter,
@@ -44,8 +45,15 @@ export default function NewSite() {
             with technology.
           </p>
           <p className="mt-2">
-            You can read more <a>about me</a> or have a look at my{" "}
-            <a>projects</a>.
+            You can read more{" "}
+            <Link href="/about">
+              <a>about me</a>
+            </Link>{" "}
+            or have a look at{" "}
+            <Link href="/projects">
+              <a>my projects</a>
+            </Link>
+            .
           </p>
         </div>
         <a
