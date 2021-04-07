@@ -9,6 +9,21 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <GoogleFonts href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" />
+          {/* Google Adsense */}      
+          <script
+              async
+              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+               (adsbygoogle = window.adsbygoogle || []).push({
+                   google_ad_client: "ca-pub-2601037688895587",
+                   enable_page_level_ads: true
+              });
+                `,
+              }}
+            />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
