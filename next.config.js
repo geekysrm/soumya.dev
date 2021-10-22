@@ -30,4 +30,8 @@ module.exports = withMdxEnhanced({
     phase: "both",
   },
   pageExtensions: ["js", "jsx", "md", "mdx"],
-})(/* your normal nextjs config */);
+})({
+  images: {
+    domains: ["cdn.hashnode.com"],
+  },
+});
