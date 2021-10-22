@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",
-    "postcss": "^8.2.8",
+    "postcss": "^8.2.10",
     "rehype": "^11.0.0",
     "tailwindcss": "^2.0.4"
   }
