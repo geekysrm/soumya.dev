@@ -22,7 +22,7 @@
     "jsonwebtoken": "^8.5.1",
     "lodash.sortby": "^4.7.0",
     "mdx-prism": "^0.3.1",
-    "next": "10.0.9",
+    "next": "12.1.0",
     "next-google-fonts": "^1.2.1",
     "next-mdx-enhanced": "^5.0.0",
     "next-seo": "^4.15.0",
