@@ -19,7 +19,7 @@
     "framer-motion": "^4.1.2",
     "google-auth-library": "^7.0.4",
     "googleapis": "^70.0.0",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "lodash.sortby": "^4.7.0",
     "mdx-prism": "^0.3.1",
     "next": "10.0.9",
